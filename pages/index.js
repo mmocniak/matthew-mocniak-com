@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="mx-4 sm:mx-12 lg:mx-64 xl:mx-96 mt-24 mb-48 space-y-28">
+        <div className="mx-4 sm:mx-12 lg:mx-64 xl:mx-96 mt-24 mb-48 space-y-28 min-w-min">
           <div className="space-y-8">
             <h1 className="text-5xl font-bold text-gray-800">
               Matthew Mocniak
