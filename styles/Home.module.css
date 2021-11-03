@@ -40,9 +40,10 @@
 }
 
 .title {
+  font-family: sans-serif;
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .title,
