@@ -12,13 +12,18 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="mx-72 mt-12">
+        <div className="mx-96 mt-12 space-y-8">
           <h1 className="text-5xl font-bold text-gray-800">
             Matthew Mocniak
           </h1>
-          <h2 className="mt-8 text-2xl text-gray-600">
-            I'm a product designer who has a keen attention to detail. I love working closely with other designers and developers to deliver excellent products and experiences.
+          <h2 className="text-2xl text-gray-600">
+            I'm a product designer with a keen attention to detail. I love working closely with other designers and developers to deliver excellent products and experiences.
           </h2>
+          <div className="grid grid-flow-col auto-cols-max space-x-8">
+            <div>Figma: <a href="#">matthew_mocniak</a></div>
+            <div>Twitter: <a href="#">matthew_mocniak</a></div>
+            <div>Hey: <a href="#">matthew.m@hey.com</a></div>
+          </div>
         </div>
       </main>
     </div>
