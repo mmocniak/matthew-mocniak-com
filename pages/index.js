@@ -1,6 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,20 +11,33 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="mx-96 mt-12 space-y-8">
-          <h1 className="text-5xl font-bold text-gray-800">
-            Matthew Mocniak
-          </h1>
-          <h2 className="text-2xl text-gray-600">
-            I'm a product designer with a keen attention to detail. I love working closely with other designers and developers to deliver excellent products and experiences.
-          </h2>
-          <div className="grid grid-flow-col auto-cols-max space-x-8">
-            <div>Figma: <a href="#">matthew_mocniak</a></div>
-            <div>Twitter: <a href="#">matthew_mocniak</a></div>
-            <div>Hey: <a href="#">matthew.m@hey.com</a></div>
+        <div className="mx-96 mt-12 space-y-28">
+          <div className="space-y-8">
+            <h1 className="text-5xl font-bold text-gray-800">
+              Matthew Mocniak
+            </h1>
+            <h2 className="text-2xl text-gray-600">
+              I'm a product designer with a keen attention to detail. I love
+              working closely with other designers and developers to deliver
+              excellent products and experiences.
+            </h2>
+            <div className="grid grid-flow-col auto-cols-max space-x-8">
+              <div>
+                Figma: <a href="#">matthew_mocniak</a>
+              </div>
+              <div>
+                Twitter: <a href="#">matthew_mocniak</a>
+              </div>
+              <div>
+                Hey: <a href="#">matthew.m@hey.com</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>Hello world</p>
           </div>
         </div>
       </main>
     </div>
-  )
+  );
 }
