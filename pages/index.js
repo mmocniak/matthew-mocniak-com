@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from 'next/link'
+
 
 export default function Home() {
   return (
@@ -21,15 +23,16 @@ export default function Home() {
               working closely with other designers and developers to deliver
               excellent products and experiences.
             </h2>
-            <div className="grid grid-flow-col auto-cols-max space-x-8">
+
+            <div className="grid grid-flow-col auto-cols-max space-x-8 px-4 py-2 rounded bg-blue-50 text-blue-600">
               <div>
-                Figma: <a href="#">matthew_mocniak</a>
+                <a className="flex align-middle" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-                Twitter: <a href="#">matthew_mocniak</a>
+              <a className="flex align-middle" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-                Hey: <a href="#">matthew.m@hey.com</a>
+              <a className="flex align-middle" href="mailto:matthew.m@hey.com"><img src="./images/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
               </div>
             </div>
           </div>
@@ -56,12 +59,12 @@ export default function Home() {
                   <p className="text-gray-500">A powerful, lil documentation component that can be dropped into any file to add context to a mock-up, describe a workflow, or annotate your work.</p>
                 </div>
 
-                <div className="w-56 bg-white px-5 py-3 border-2 border-black border-opacity-10 rounded drop-shadow text-center text-blue-600">
+                <div className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600">
                     Figma Community File
                 </div>
 
                 <div className="flex col-span-4 space-x-3">
-                    <div className="bg-gray-100 w-48 h-28"></div>
+                    <div className="bg-gradient-to-b from-gray-100 to-gray-100 w-48 h-28 hover:from-white"></div>
                     <div className="bg-gray-100 w-48 h-28"></div>
                     <div className="bg-gray-100 w-48 h-28"></div>
                 </div>
