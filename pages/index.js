@@ -13,12 +13,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="mx-4 sm:mx-12 lg:mx-64 xl:mx-96 mt-24 mb-48 space-y-28 min-w-min">
-          <div className="space-y-8">
-            <h1 className="text-5xl font-bold text-gray-800">
+        <div className="mx-4 sm:mx-12 lg:mx-24 xl:ml-48 mt-24 mb-48 space-y-28 min-w-min max-w-xs sm:max-w-md">
+          <div className="space-y-5 sm:space-y-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
               Matthew Mocniak
             </h1>
-            <h2 className="text-2xl text-gray-600">
+            <h2 className="text-xl sm:text-2xl text-gray-600 max-w-sm sm:max-w-2xl md:max-w-3xl">
               I'm a product designer with a keen attention to detail. I love
               working closely with other designers and developers to deliver
               excellent products and experiences.
@@ -26,16 +26,17 @@ export default function Home() {
 
             <div className="grid grid-flow-col auto-cols-max space-x-8 px-4 py-2 rounded bg-blue-50 text-blue-600">
               <div>
-                <a className="flex align-middle" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
+                <a className="flex items-center" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-              <a className="flex align-middle" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
+              <a className="flex items-center" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-              <a className="flex align-middle" href="mailto:matthew.m@hey.com"><img src="./images/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
+              <a className="flex items-center" href="mailto:matthew.m@hey.com"><img src="./images/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
               </div>
             </div>
           </div>
+
           <div className="space-y-6">
             <div className="border-b border-black border-opacity-10"><div className="mb-2 text-base text-gray-500">Experience</div></div>
             <ul className="text-lg space-y-6 w-auto mr-20">
