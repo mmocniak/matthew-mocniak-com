@@ -14,11 +14,11 @@ export default function Home() {
 
       <main>
         <div className="mx-4 sm:mx-12 lg:mx-24 xl:ml-48 mt-24 mb-48 space-y-28 min-w-min max-w-xs sm:max-w-md">
-          <div className="space-y-5 sm:space-y-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+          <div className="space-y-8">
+            <h1 className="text-5xl sm:text-5xl font-bold text-gray-800">
               Matthew Mocniak
             </h1>
-            <h2 className="text-xl sm:text-2xl text-gray-600 max-w-sm sm:max-w-2xl md:max-w-3xl">
+            <h2 className="text-3xl sm:text-2xl text-gray-600 max-w-prose">
               I'm a product designer with a keen attention to detail. I love
               working closely with other designers and developers to deliver
               excellent products and experiences.
@@ -26,13 +26,13 @@ export default function Home() {
 
             <div className="grid grid-flow-col auto-cols-max space-x-8 px-4 py-2 rounded bg-blue-50 text-blue-600">
               <div>
-                <a className="flex items-center" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
+                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-              <a className="flex items-center" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
+                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-              <a className="flex items-center" href="mailto:matthew.m@hey.com"><img src="./images/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
+                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
               </div>
             </div>
           </div>
@@ -40,11 +40,11 @@ export default function Home() {
           <div className="space-y-6">
             <div className="border-b border-black border-opacity-10"><div className="mb-2 text-base text-gray-500">Experience</div></div>
             <ul className="text-lg space-y-6 w-auto mr-20">
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold">Viget, <span className="font-normal text-gray-500">Product Designer</span></div><div className="text-gray-400">2019–</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold">KitCo Sets, <span className="font-normal text-gray-500">Co-founder</span></div><div className="text-gray-400">2019–</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold">Red Hat, <span className="font-normal text-gray-500">Product Designer</span></div><div className="text-gray-400">2018–19</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold">IBM, <span className="font-normal text-gray-500">UX Designer</span></div><div className="text-gray-400">2016–18</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold">IBM, <span className="font-normal text-gray-500">Business Analyst</span></div><div className="text-gray-400">2014–16</div></li>
+              <li className="flex justify-between"><div className="text-gray-700 font-semibold hover:underline hover:text-blue-500 active:text-blue-800"><a href="https://www.viget.com" target="_blank">Viget, <span className="font-normal text-gray-500">Product Designer</span></a></div><div className="text-gray-400">2019–</div></li>
+              <li className="flex justify-between"><div className="text-gray-700 font-semibold hover:underline hover:text-blue-500 active:text-blue-800"><a href="https://www.kitcosets.com" target="_blank">KitCo Sets, <span className="font-normal text-gray-500 no-underline">Co-founder</span></a></div><div className="text-gray-400">2019–</div></li>
+              <li className="flex justify-between"><div className="text-gray-700 font-semibold hover:underline hover:text-blue-500 active:text-blue-800"><a href="https://www.redhat.com/" target="_blank">Red Hat, <span className="font-normal text-gray-500 no-underline">Product Designer</span></a></div><div className="text-gray-400">2018–19</div></li>
+              <li className="flex justify-between"><div className="text-gray-700 font-semibold hover:underline hover:text-blue-500 active:text-blue-800"><a href="https://www.ibm.com/" target="_blank">IBM, <span className="font-normal text-gray-500 no-underline">UX Designer</span></a></div><div className="text-gray-400">2016–18</div></li>
+              <li className="flex justify-between"><div className="text-gray-700 font-semibold hover:underline hover:text-blue-500 active:text-blue-800"><a href="https://www.ibm.com/" target="_blank">IBM, <span className="font-normal text-gray-500 no-underline">Business Analyst</span></a></div><div className="text-gray-400">2014–16</div></li>
             </ul>
           </div>
 
@@ -60,9 +60,9 @@ export default function Home() {
                   <p className="text-gray-500">A powerful, lil documentation component that can be dropped into any file to add context to a mock-up, describe a workflow, or annotate your work.</p>
                 </div>
 
-                <div className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600">
-                    Figma Community File
-                </div>
+                <div><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" target="_blank" className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
+                  Figma Community File
+                </a></div>
 
                 <div className="flex col-span-4 space-x-3">
                     <div className="bg-gradient-to-b from-gray-100 to-gray-100 w-48 h-28 hover:from-white"></div>
