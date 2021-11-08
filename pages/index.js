@@ -61,9 +61,9 @@ export default function Home() {
                 </div>
 
                 <div className="flex col-span-3 space-x-3">
-                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-56 object-cover object-center"><img src="./images/full/01 documentation header.png"></img></a>
-                    <div className="bg-gray-100 w-56 h-28"></div>
-                    <div className="bg-gray-100 w-56 h-28"></div>
+                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-5/12"><img src="./images/full/01 documentation header.png" className="max-w-full h-auto"></img></a>
+                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-5/12"><img src="./images/full/01 documentation header.png" className="max-w-full h-auto"></img></a>
+                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-5/12"><img src="./images/full/01 documentation header.png" className="max-w-full h-auto"></img></a>
                 </div>
 
                 <div className=""><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" target="_blank" rel="noreferrer" className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
