@@ -24,15 +24,15 @@ export default function Home() {
               excellent products and experiences.
             </h2>
 
-            <div className="grid grid-flow-col auto-cols-max space-x-8 px-4 py-2 rounded bg-blue-50 text-blue-600">
+            <div className="grid grid-flow-col auto-cols-max space-x-8 px-4 py-2 rounded-lg bg-blue-50 text-blue-600">
               <div>
-                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
+                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/socials/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
+                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/socials/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
               </div>
               <div>
-                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
+                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/socials/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
               </div>
             </div>
           </div>
@@ -60,15 +60,15 @@ export default function Home() {
                   <p className="text-gray-500">A powerful, lil documentation component that can be dropped into any file to add context to a mock-up, describe a workflow, or annotate your work.</p>
                 </div>
 
-                <div><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" target="_blank" className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
+                <div className="flex col-span-3 space-x-3">
+                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-56 object-cover object-center"><img src="./images/full/01 documentation header.png"></img></a>
+                    <div className="bg-gray-100 w-56 h-28"></div>
+                    <div className="bg-gray-100 w-56 h-28"></div>
+                </div>
+
+                <div className=""><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" target="_blank" rel="noreferrer" className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
                   Figma Community File
                 </a></div>
-
-                <div className="flex col-span-4 space-x-3">
-                    <div className="bg-gradient-to-b from-gray-100 to-gray-100 w-48 h-28 hover:from-white"></div>
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                </div>
               </div>
 
               <div className="space-y-8">
