@@ -12,34 +12,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <div className="mx-4 sm:mx-12 lg:mx-24 xl:ml-48 mt-24 mb-48 space-y-28 min-w-min max-w-xs sm:max-w-md">
-          <div className="space-y-8">
-            <h1 className="text-5xl sm:text-5xl font-bold text-gray-800">
+      <main className="mx-4 mt-8 mb-48 max-w-full md:mx-8 md:max-w-2xl">
+        <div className="">
+          <div className="space-y-4 sm:space-y-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
               Matthew Mocniak
             </h1>
-            <h2 className="text-3xl sm:text-2xl text-gray-600 max-w-prose">
+            <h2 className="text-xl sm:text-2xl text-gray-600 ">
               I'm a product designer with a keen attention to detail. I love
               working closely with other designers and developers to deliver
               excellent products and experiences.
             </h2>
-
-            <div className="grid grid-flow-col auto-cols-max space-x-8 px-4 py-2 rounded-lg bg-blue-50 text-blue-600">
-              <div>
-                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/socials/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
-              </div>
-              <div>
-                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/socials/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
-              </div>
-              <div>
-                <a className="flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/socials/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
-              </div>
-            </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="border-b border-black border-opacity-10"><div className="mb-2 text-base text-gray-500">Experience</div></div>
-            <ul className="text-lg space-y-6 w-auto mr-20">
+          <div className="mt-8 px-3 py-2 space-y-2 text-base rounded-lg bg-blue-50 text-blue-600 border border-blue-600 border-opacity-10 md:grid md:grid-flow-col md:content-center md:space-y-0">
+              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/socials/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
+              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/socials/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
+              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/socials/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
+          </div>
+        </div>
+
+          <div className="mt-10 space-y-4">
+            <div className="border-b border-gray-700 border-opacity-20 pb-2 text-base text-gray-500">Experience</div>
+            <ul className="text-lg space-y-6 w-auto sm:mr-10">
               <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.viget.com" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">Viget, <span className="font-normal text-gray-500 no-underline">Product Designer</span></a></div><div className="text-gray-400">2019–</div></li>
               <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.kitcosets.com" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">KitCo Sets, <span className="font-normal text-gray-500 no-underline">Co-founder</span></a></div><div className="text-gray-400">2019–</div></li>
               <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.redhat.com/" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">Red Hat, <span className="font-normal text-gray-500 no-underline">Product Designer</span></a></div><div className="text-gray-400">2018–19</div></li>
@@ -48,23 +43,26 @@ export default function Home() {
             </ul>
           </div>
 
-          <div>
-            <div className="space-y-6">
-              <div className="border-b border-black border-opacity-10"><div className="mb-2 text-base text-gray-500">Recent Work</div></div>
-              </div>
+          <div className="mt-16">
+            <div className="border-b border-gray-700 border-opacity-20 pb-2 text-base text-gray-500">Recent Work</div>
             
-            <div className="space-y-28 mt-6">
-              <div className="space-y-8">
-                <div className="text-lg space-y-2 w-auto mr-20">
-                  <p className="font-bold text-gray-700">Documentation Header</p>
-                  <p className="text-gray-500">A powerful, lil documentation component that can be dropped into any file to add context to a mock-up, describe a workflow, or annotate your work.</p>
-                </div>
+            <div className="mt-4 space-y-2 sm:mr-10">
+              <h3 className="font-bold text-xl text-gray-700">Documentation Header</h3>
+              <p className="text-lg text-gray-500">A powerful, lil documentation component that can be dropped into any file to add context to a mock-up, describe a workflow, or annotate your work.</p>
+            </div>
 
-                <div className="flex col-span-3 space-x-3">
-                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-5/12"><img src="./images/full/01 documentation header.png" className="max-w-full h-auto"></img></a>
-                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-5/12"><img src="./images/full/01 documentation header.png" className="max-w-full h-auto"></img></a>
-                    <a href="./images/full/01 documentation header.png" target="_blank" className="w-5/12"><img src="./images/full/01 documentation header.png" className="max-w-full h-auto"></img></a>
-                </div>
+            <div className="mt-6">
+              <a href="./images/full/01 documentation header.png" target="_blank" className="max-w-full"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-lg h-auto"></img></a>
+            </div>
+
+            <div className="mt-4 flex grid-flow-cols grid-cols-2 grid-rows-2 gap-4">
+              <a href="./images/full/01 documentation header.png" target="_blank" className=""><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md"></img></a>
+              <a href="./images/full/01 documentation header.png" target="_blank" className=""><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md"></img></a>
+            </div>
+
+
+            <div className="space-y-28 mt-6">
+            <div>
 
                 <div className=""><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" target="_blank" rel="noreferrer" className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
                   Figma Community File
@@ -108,7 +106,6 @@ export default function Home() {
             </div>
           </div>
 
-        </div>
       </main>
     </div>
   );
