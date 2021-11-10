@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="mx-4 mt-8 mb-48 max-w-full md:mx-8 md:max-w-2xl">
+      <main className="mx-4 mt-8 mb-48 max-w-full md:mx-8 lg:mx-24 md:max-w-2xl">
         <div className="">
           <div className="space-y-4 sm:space-y-6">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
@@ -26,8 +26,8 @@ export default function Home() {
           </div>
 
           <div className="mt-8 px-3 py-2 space-y-2 text-base rounded-lg bg-blue-50 text-blue-600 border border-blue-600 border-opacity-10 md:grid md:grid-flow-col md:content-center md:space-y-0">
-              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/socials/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
-              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/socials/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
+              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak"><img src="./images/socials/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
+              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak"><img src="./images/socials/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
               <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/socials/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
           </div>
         </div>
@@ -35,11 +35,17 @@ export default function Home() {
           <div className="mt-10 space-y-4">
             <div className="border-b border-gray-700 border-opacity-20 pb-2 text-base text-gray-500">Experience</div>
             <ul className="text-lg space-y-6 w-auto sm:mr-10">
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.viget.com" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">Viget, <span className="font-normal text-gray-500 no-underline">Product Designer</span></a></div><div className="text-gray-400">2019–</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.kitcosets.com" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">KitCo Sets, <span className="font-normal text-gray-500 no-underline">Co-founder</span></a></div><div className="text-gray-400">2019–</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.redhat.com/" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">Red Hat, <span className="font-normal text-gray-500 no-underline">Product Designer</span></a></div><div className="text-gray-400">2018–19</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.ibm.com/" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">IBM, <span className="font-normal text-gray-500 no-underline">UX Designer</span></a></div><div className="text-gray-400">2016–18</div></li>
-              <li className="flex justify-between"><div className="text-gray-700 font-semibold"><a href="https://www.ibm.com/" target="_blank" rel="noreferrer" className="block hover:underline hover:text-blue-500 active:text-blue-800">IBM, <span className="font-normal text-gray-500 no-underline">Business Analyst</span></a></div><div className="text-gray-400">2014–16</div></li>
+
+              <li><a href="https://www.viget.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Viget</span>, <span className="text-gray-500">Product Designer</span></div><span className="text-gray-400">2019–</span></a></li>
+
+              <li><a href="https://www.kitcosets.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">KitCo Sets</span>, <span className="text-gray-500">Co-founder</span></div><span className="text-gray-400">2019–</span></a></li>
+
+              <li><a href="https://www.redhat.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Red Hat</span>, <span className="text-gray-500">Product Designer</span></div><span className="text-gray-400">2018–19</span></a></li>
+              
+              <li><a href="https://www.ibm.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">IBM</span>, <span className="text-gray-500">UX Designer</span></div><span className="text-gray-400">2016–18</span></a></li>
+
+              <li><a href="https://www.ibm.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">IBM</span>, <span className="text-gray-500">Business Analyst</span></div><span className="text-gray-400">2014–16</span></a></li>
+
             </ul>
           </div>
 
@@ -52,58 +58,30 @@ export default function Home() {
             </div>
 
             <div className="mt-6">
-              <a href="./images/full/01 documentation header.png" target="_blank" className="max-w-full"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-lg h-auto"></img></a>
+              <a href="./images/full/01 documentation header.png" className="max-w-full"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-xl transform hover:-translate-y-0.5"></img></a>
             </div>
 
-            <div className="mt-4 flex grid-flow-cols grid-cols-2 grid-rows-2 gap-4">
-              <a href="./images/full/01 documentation header.png" target="_blank" className=""><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md"></img></a>
-              <a href="./images/full/01 documentation header.png" target="_blank" className=""><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md"></img></a>
+            <div className="mt-3 flex grid-cols-2 gap-3">
+              <a href="./images/full/01 documentation header.png"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5"></img></a>
+              <a href="./images/full/02 documentation stacked.png"><img src="./images/full/02 documentation stacked.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5"></img></a>
+            </div>
+
+            <button className="flex w-full md:w-auto mt-6 group">
+            <a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File"  className="flex items-center w-full justify-center bg-white border border-gray-700 border-opacity-20 text-blue-600  pl-4 pr-5 py-3 rounded filter drop-shadow-btn hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2"><img src="./images/socials/figma.svg" alt="Figma" width="24" height="24" className="mr-1"/>View Community File</a>
+            </button>
+
+
+            <div className="mt-28 space-y-2 sm:mr-10">
+              <h3 className="font-bold text-xl text-gray-700">VaxFinder</h3>
+              <p className="text-lg text-gray-500">A website we built in less than one week to collect and display vaccine site details for the Commonwealth of Massachusetts.</p>
             </div>
 
 
-            <div className="space-y-28 mt-6">
-            <div>
+            <button><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" className="mt-6 items-center flex bg-white px-5 py-3 rounded border border-black border-opacity-10 filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
+            Read More
+            </a></button>
 
-                <div className=""><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" target="_blank" rel="noreferrer" className="w-56 bg-white px-5 py-3 border border-black border-opacity-10 rounded filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
-                  Figma Community File
-                </a></div>
-              </div>
 
-              <div className="space-y-8">
-                <div className="text-lg space-y-2 w-auto mr-20">
-                  <p className="font-bold text-gray-700">VaxFinder</p>
-                  <p className="text-gray-500">A website we built in less than one week to collect and display vaccine site details for the Commonwealth of Massachusetts.</p>
-                </div>
-
-                {/* <div className="w-56 bg-white px-5 py-3 border-2 border-black border-opacity-10 rounded drop-shadow text-center text-blue-600">
-                    Figma Community File
-                </div> */}
-
-                <div className="flex col-span-4 space-x-3">
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                </div>
-              </div>
-
-              <div className="space-y-8">
-                <div className="text-lg space-y-2 w-auto mr-20">
-                  <p className="font-bold text-gray-700">Matchwell</p>
-                  <p className="text-gray-500">An online platform that connects healthcare professionals to facilities with flexible job opportunities. I led design for the clinician and facility apps, each with their own user group.</p>
-                </div>
-
-                {/* <div className="w-56 bg-white px-5 py-3 border-2 border-black border-opacity-10 rounded drop-shadow text-center text-blue-600">
-                    Figma Community File
-                </div> */}
-
-                <div className="flex col-span-4 space-x-3">
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                    <div className="bg-gray-100 w-48 h-28"></div>
-                </div>
-              </div>
-
-            </div>
           </div>
 
       </main>
