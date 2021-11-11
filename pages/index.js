@@ -14,7 +14,9 @@ export default function Home() {
 
       <main className="mx-4 mt-8 mb-48 max-w-full md:mx-8 lg:mx-24 md:max-w-2xl">
         <div className="">
-          <div className="space-y-4 sm:space-y-6">
+        <div className="max-w-max bg-blue-100 p-2 md:p-5 rounded-full"><img src="./images/faces/smile.png" alt="Smiling Memoji" className="w-32 md:w-40 h-32 md:h-40"/></div>
+
+          <div className="mt-8 space-y-4 sm:space-y-6">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
               Matthew Mocniak
             </h1>
@@ -23,6 +25,7 @@ export default function Home() {
               working closely with other designers and developers to deliver
               excellent products and experiences.
             </h2>
+            
           </div>
 
           <div className="mt-8 px-3 py-2 space-y-2 text-base rounded-lg bg-blue-50 text-blue-600 border border-blue-600 border-opacity-10 md:grid md:grid-flow-col md:content-center md:space-y-0">
@@ -58,29 +61,32 @@ export default function Home() {
             </div>
 
             <div className="mt-6">
-              <a href="./images/full/01 documentation header.png" className="max-w-full"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-xl transform hover:-translate-y-0.5"></img></a>
+              <a href="./images/full/01 documentation header.png" className="max-w-full"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
             <div className="mt-3 flex grid-cols-2 gap-3">
-              <a href="./images/full/01 documentation header.png"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5"></img></a>
-              <a href="./images/full/02 documentation stacked.png"><img src="./images/full/02 documentation stacked.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5"></img></a>
+              <a href="./images/full/01 documentation header.png"><img src="./images/full/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
+              <a href="./images/full/02 documentation stacked.png"><img src="./images/full/02 documentation stacked.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
             <button className="flex w-full md:w-auto mt-6 group">
-            <a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File"  className="flex items-center w-full justify-center bg-white border border-gray-700 border-opacity-20 text-blue-600  pl-4 pr-5 py-3 rounded filter drop-shadow-btn hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2"><img src="./images/socials/figma.svg" alt="Figma" width="24" height="24" className="mr-1"/>View Community File</a>
+            <a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File"  className="flex items-center w-full justify-center bg-white border border-gray-700 border-opacity-20 text-blue-600  pl-4 pr-5 py-3 rounded filter drop-shadow-btn hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100"><img src="./images/socials/figma.svg" alt="Figma" width="24" height="24" className="mr-1"/>View Community File</a>
             </button>
 
 
             <div className="mt-28 space-y-2 sm:mr-10">
-              <h3 className="font-bold text-xl text-gray-700">VaxFinder</h3>
-              <p className="text-lg text-gray-500">A website we built in less than one week to collect and display vaccine site details for the Commonwealth of Massachusetts.</p>
+              <h3 className="font-bold text-xl text-gray-700">Vaxfinder</h3>
+              <p className="text-lg text-gray-500">I led product design for a website we built in less than one week to collect and display vaccine site details for the Commonwealth of Massachusetts. Within the first two weeks of launch, the Vaxfinder site garnered 60MM pageviews and at its peak hosted around 40,000 concurrent users.</p>
             </div>
 
+            {/* <button className="flex w-full md:w-auto mt-6 group">
+            <a href="https://vaxfinder.mass.gov/" alt="Vaxfinder" className="w-full justify-center bg-white border border-gray-700 border-opacity-20 text-blue-600 px-5 py-3 rounded filter drop-shadow-btn hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100">Go to vaxfinder.mass.org</a>
+            </button> */}
 
-            <button><a href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component" alt="Figma Community File" className="mt-6 items-center flex bg-white px-5 py-3 rounded border border-black border-opacity-10 filter drop-shadow-btn text-center text-blue-600 hover:bg-gray-100 hover:text-blue-500 active:bg-gray-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2">
-            Read More
-            </a></button>
-
+            <div className="mt-28 space-y-2 sm:mr-10">
+              <h3 className="font-bold text-xl text-gray-700">Matchwell</h3>
+              <p className="text-lg text-gray-500">An online platform that connects healthcare professionals with facilities that offer flexible shift opportunities. I led product design for both the clinician and facility apps, each with their own user group.</p>
+            </div>
 
           </div>
 
