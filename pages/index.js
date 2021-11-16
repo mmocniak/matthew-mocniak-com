@@ -65,8 +65,8 @@ export default function Home() {
             </div>
 
             <div className="mt-3 flex grid-cols-2 gap-3">
-              <a href="./images/full/documentation header/01 documentation header.png"><img src="./images/full/documentation header/01 documentation header.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
-              <a href="./images/full/documentation header/02 documentation stacked.png"><img src="./images/full/documentation header/02 documentation stacked.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
+              <a href="./images/full/documentation header/02 documentation in use.png"><img src="./images/full/documentation header/02 documentation in use.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-fill hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
+              <a href="./images/full/documentation header/03 documentation text width.png"><img src="./images/full/documentation header/03 documentation text width.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
             <button className="flex w-full md:w-auto mt-6 group">
@@ -76,7 +76,12 @@ export default function Home() {
 
             <div className="mt-28 space-y-2 sm:mr-10">
               <h3 className="font-bold text-xl text-gray-700">Vaxfinder</h3>
-              <p className="text-lg text-gray-500">I led product design for a website we built in less than one week to collect and display vaccine site details for the Commonwealth of Massachusetts. Within the first two weeks of launch, the Vaxfinder site garnered 60MM pageviews and at its peak hosted around 40,000 concurrent users.</p>
+              <p className="text-lg text-gray-500">I led product design for a website we built in less than one week to collect and display vaccine site details for the Commonwealth of Massachusetts. Within the first two weeks of launch, the Vaxfinder site garnered 60 million pageviews and at its peak hosted around 40,000 concurrent users.</p>
+            </div>
+
+            <div className="mt-3 flex grid-cols-2 gap-3">
+              <a href="./images/full/vaxfinder/vaxfinder mobile.png"><img src="../images/full/vaxfinder/vaxfinder mobile.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
+              <a href="./images/full/vaxfinder/vaxfinder desktop.png"><img src="./images/full/vaxfinder/vaxfinder desktop.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
             {/* <button className="flex w-full md:w-auto mt-6 group">
@@ -89,7 +94,7 @@ export default function Home() {
             </div>
 
             <div className="mt-6">
-              <a href="./images/full/matchwell/01 matchwell hero.png" className="max-w-full"><img src="./images/full/matchwell/01 matchwell hero.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
+              <a href="./images/full/matchwell/01 matchwell mobile.png" className="max-w-full"><img src="./images/full/matchwell/01 matchwell mobile.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
             <div className="mt-3 flex grid-cols-2 gap-3">
