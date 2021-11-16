@@ -67,7 +67,7 @@ export default function Home() {
             </div>
 
             <div className="mt-3 flex grid-cols-2 gap-3">
-              <a href="./images/full/documentation header/02 documentation in use.png"><img src="./images/full/documentation header/02 documentation in use.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-fill hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
+              <a href="./images/full/documentation header/02 documentation in use.png"><img src="./images/full/documentation header/02 documentation in use.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
               <a href="./images/full/documentation header/03 documentation text width.png"><img src="./images/full/documentation header/03 documentation text width.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
@@ -100,9 +100,12 @@ export default function Home() {
             </div>
 
             <div className="mt-3 flex grid-cols-2 gap-3">
-              <a href="./images/full/matchwell/02 matchwell desktop.png"><img src="../images/full/matchwell/02 matchwell desktop.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
+              <a href="./images/full/matchwell/02 matchwell desktop.png"><img src="./images/full/matchwell/02 matchwell desktop.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
               <a href="./images/full/matchwell/03 matchwell documentation.png"><img src="./images/full/matchwell/03 matchwell documentation.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
+
+            <div className="mt-20 pb-2 text-base text-gray-500">Thanks for visiting, I hope you like my stuff!</div>
+            <div className="text-indent text-transparent h-14 mt-4 bg-signature bg-no-repeat bg-contain"></div>
 
           </div>
 
