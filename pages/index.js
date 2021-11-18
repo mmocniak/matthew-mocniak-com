@@ -31,8 +31,8 @@ export default function Home() {
           </div>
 
           <div className="mt-8 px-3 py-2 space-y-2 text-base rounded-lg bg-blue-50 text-blue-600 border border-blue-600 border-opacity-10 md:grid md:grid-flow-col md:content-center md:space-y-0">
-              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak"><img src="./images/socials/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
-              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak"><img src="./images/socials/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
+              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.figma.com/@matthew_mocniak" target="_blank"><img src="./images/socials/figma.svg" alt="Figma" width="30" height="30"/>@matthew_mocniak</a>
+              <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="https://www.twitter.com/@matthew_mocniak" target="_blank"><img src="./images/socials/twitter.svg" alt="Twitter" width="30" height="30"/>@matthew_mocniak</a>
               <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/socials/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
           </div>
         </div>
@@ -45,9 +45,9 @@ export default function Home() {
 
               <li><a href="https://www.kitcosets.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">KitCo Sets</span>, <span className="text-gray-500">Co-founder</span></div><span className="text-gray-400">2019–</span></a></li>
 
-              <li><a href="https://www.redhat.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Red Hat</span>, <span className="text-gray-500">Product Designer</span></div><span className="text-gray-400">2018–19</span></a></li>
+              <li><a href="https://www.redhat.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Red Hat</span>, <span className="text-gray-500">Product Designer</span></div><span className="text-gray-400">2019</span></a></li>
               
-              <li><a href="https://www.ibm.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">IBM</span>, <span className="text-gray-500">UX Designer</span></div><span className="text-gray-400">2016–18</span></a></li>
+              <li><a href="https://www.ibm.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">IBM</span>, <span className="text-gray-500">UX Designer</span></div><span className="text-gray-400">2016–19</span></a></li>
 
               <li><a href="https://www.ibm.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">IBM</span>, <span className="text-gray-500">Business Analyst</span></div><span className="text-gray-400">2014–16</span></a></li>
 
