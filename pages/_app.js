@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     //  - This must be an exact match of your domain.
     //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load('JPSHXLBJ', {
-      includedDomains: ["www.matthewmocniak.com","matthewmocniak.com","www.mocniak.site"],
+      includedDomains: ["www.matthewmocniak.com","matthewmocniak.com","www.mocniak.site","mocniak.site"],
     });
 
     function onRouteChangeComplete() {
