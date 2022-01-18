@@ -1,4 +1,6 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 
 module.exports = {
   purge: ['./pages/*.{js,ts,jsx,tsx}'],
@@ -22,9 +24,14 @@ module.exports = {
         '3/5': '60%',
       }
     },
+    fontFamily: {
+      'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+     }
   },
+  
   variants: {
     extend: {
+      fontFamily: ['hover', 'focus'],
       backgroundColor: ['active'],
       textColor: ['active'],
       textDecoration: ['first'],
