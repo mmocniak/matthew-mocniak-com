@@ -1,5 +1,5 @@
 const colors = require('tailwindcss/colors')
-const defaultTheme = require('tailwindcss/defaultTheme')
+// const defaultTheme = require('tailwindcss/defaultTheme')
 
 
 module.exports = {
@@ -24,9 +24,9 @@ module.exports = {
         '3/5': '60%',
       }
     },
-    fontFamily: {
-      'sans': ['Inter', ...defaultTheme.fontFamily.sans],
-     }
+    // fontFamily: {
+    //   'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+    //  }
   },
   
   variants: {

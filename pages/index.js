@@ -11,7 +11,6 @@ export default function Home() {
         <meta name="description" content="Product designer, side project tinkerer, and idea thinker, based in Raleigh, NC." />
         <meta property="og:image" content="./images/meta.png"/>
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"></link>
       </Head>
 
       <main className="mx-4 mt-8 mb-48 max-w-full md:mx-8 lg:mx-24 md:max-w-2xl">
