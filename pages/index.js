@@ -105,7 +105,7 @@ export default function Home() {
               <a href="./images/full/matchwell/03 matchwell documentation.png"><img src="./images/full/matchwell/03 matchwell documentation.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
-            <div className="mt-20 pb-2 text-xl text-gray-500">Thanks for visiting, I hope you like my stuff!</div>
+            <div className="mt-20 pb-2 text-lg text-gray-500">Thanks for visiting, I hope you like my stuff!</div>
             <div className="text-indent text-transparent h-14 mt-4 bg-signature bg-no-repeat bg-contain"></div>
 
           </div>
