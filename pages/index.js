@@ -40,7 +40,7 @@ export default function Home() {
             <div className="border-b border-gray-700 border-opacity-20 pb-2 text-base text-gray-500">Experience</div>
             <ul className="text-lg space-y-6 w-auto sm:mr-10">
 
-              <li><a href="https://www.lattice.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Lattice</span>, <span className="text-gray-500">Senior Product Designer (New Product Initiative)</span></div><span className="text-gray-400">2022–</span></a></li>
+              <li><a href="https://www.lattice.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Lattice</span>, <span className="text-gray-500">Senior Product Designer</span></div><span className="text-gray-400">2022–</span></a></li>
             
               <li><a href="https://www.viget.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Viget</span>, <span className="text-gray-500">Senior Product Designer</span></div><span className="text-gray-400">2019–22</span></a></li>
 
