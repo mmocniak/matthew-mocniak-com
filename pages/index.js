@@ -35,12 +35,14 @@ export default function Home() {
               <a className="p-1 flex items-center hover:underline hover:text-blue-500 active:text-blue-800" href="mailto:matthew.m@hey.com"><img src="./images/socials/hey.svg" alt="Hey" width="30" height="30"/>matthew.m@hey.com</a>
           </div>
         </div>
-
+{/* Work history */}
           <div className="mt-10 space-y-4">
             <div className="border-b border-gray-700 border-opacity-20 pb-2 text-base text-gray-500">Experience</div>
             <ul className="text-lg space-y-6 w-auto sm:mr-10">
 
-              <li><a href="https://www.viget.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Viget</span>, <span className="text-gray-500">Senior Product Designer</span></div><span className="text-gray-400">2019–</span></a></li>
+              <li><a href="https://www.lattice.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Lattice</span>, <span className="text-gray-500">Senior Product Designer – New Product Initiative</span></div><span className="text-gray-400">2022–</span></a></li>
+            
+              <li><a href="https://www.viget.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Viget</span>, <span className="text-gray-500">Senior Product Designer</span></div><span className="text-gray-400">2019–22</span></a></li>
 
               <li><a href="https://www.kitcosets.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">KitCo Sets</span>, <span className="text-gray-500">Co-founder</span></div><span className="text-gray-400">2019–</span></a></li>
 
@@ -52,7 +54,7 @@ export default function Home() {
 
             </ul>
           </div>
-
+{/* Recent work to showcase */}
           <div className="mt-16">
             <div className="border-b border-gray-700 border-opacity-20 pb-2 text-base text-gray-500">Recent Work</div>
             
@@ -103,7 +105,7 @@ export default function Home() {
               <a href="./images/full/matchwell/03 matchwell documentation.png"><img src="./images/full/matchwell/03 matchwell documentation.png" className="border border-gray-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"></img></a>
             </div>
 
-            <div className="mt-20 pb-2 text-base text-gray-500">Thanks for visiting, I hope you like my stuff!</div>
+            <div className="mt-20 pb-2 text-xl text-gray-500">Thanks for visiting, I hope you like my stuff!</div>
             <div className="text-indent text-transparent h-14 mt-4 bg-signature bg-no-repeat bg-contain"></div>
 
           </div>
