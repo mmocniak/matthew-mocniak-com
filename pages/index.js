@@ -44,7 +44,7 @@ export default function Home() {
             
               <li><a href="https://www.viget.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Viget</span>, <span className="text-gray-500">Senior Product Designer</span></div><span className="text-gray-400">2019–22</span></a></li>
 
-              <li><a href="https://www.kitcosets.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">KitCo Sets</span>, <span className="text-gray-500">Co-founder</span></div><span className="text-gray-400">2019–</span></a></li>
+              <li><a href="https://www.kitcosets.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">KitCo Sets</span>, <span className="text-gray-500">Co-founder</span></div><span className="text-gray-400">2019–22</span></a></li>
 
               <li><a href="https://www.redhat.com" className="flex justify-between group"><div><span className="text-gray-700 font-medium group-hover:underline group-hover:text-blue-500 active:text-blue-800">Red Hat</span>, <span className="text-gray-500">Product Designer</span></div><span className="text-gray-400">2019</span></a></li>
               
