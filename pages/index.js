@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Matthew Mocniak</title>
-        <meta name="description" content="Product designer, side project tinkerer, and idea thinker, based in Raleigh, NC." />
+        <meta name="description" content="Software designer, side project tinkerer, and idea thinker, based in Raleigh, NC." />
         <meta property="og:image" content="./images/meta.png"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             <div className="mt-20 pb-2 text-lg text-gray-500">Thanks for visiting, I hope you like my stuff!</div>
-            <div className="text-indent text-transparent h-14 mt-4 bg-signature bg-no-repeat bg-contain"></div>
+            <div className="text-indent text-transparent h-14 mt-4 bg-public/signature.svg bg-no-repeat bg-contain"></div>
 
           </div>
 
