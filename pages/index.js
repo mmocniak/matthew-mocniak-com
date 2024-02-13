@@ -22,7 +22,7 @@ export default function Home() {
               Matthew Mocniak
             </h1>
             <h2 className="text-xl sm:text-2xl text-gray-600 ">
-              I'm a product designer with a keen attention to detail. I love
+              I'm a software designer with a keen attention to detail. I love
               working closely with other designers and developers to deliver
               excellent products and experiences.
             </h2>
