@@ -240,6 +240,16 @@ export default function Home() {
                             ></img>
                         </a>
                     </div>
+                    {/* <Image
+                        src="/images/full/lattice/latticehris-profile.png"
+                        alt="Description of the image" // Always include an alt attribute for accessibility.
+                        width="3312"
+                        height="2164"
+                        layout="responsive"
+                        objectFit="cover"
+                        objectPosition="left top"
+                        className="border bg-emerald-50 border-slate-700 border-opacity-20 shadow-sm rounded-md hover:shadow-xl transform hover:-translate-y-0.5 transition"
+                    /> */}
                     <div className="mt-3 flex grid-cols-2 gap-3">
                         <a href="./images/full/lattice/latticehris-directory.png">
                             <img
