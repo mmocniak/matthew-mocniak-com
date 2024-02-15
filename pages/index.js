@@ -17,10 +17,10 @@ export default function Home() {
 
             <main className="mx-4 mt-8 mb-48 max-w-full md:mx-8 lg:mx-24 md:max-w-2xl">
                 <div className="">
-                    <div className="max-w-max">
+                    <div className="max-w-max bg-custom-gradient rounded-full">
                         <img
-                            src="./images/faces/MM-toy-default-small.png"
-                            alt="Smiling Memoji"
+                            src="./images/faces/MM-toy face transparent.png"
+                            alt="MM-PFP"
                             className="w-32 md:w-40 h-32 md:h-40 object-bottom rounded-full"
                         />
                     </div>
@@ -215,10 +215,10 @@ export default function Home() {
                             beneficial tools for admins to confidently manage
                             their workforce.
                         </p>
-                        <blockquote>
+                        {/* <blockquote>
                             This compensation section is very intuitive [...]
                             it's better than Rippling.
-                        </blockquote>
+                        </blockquote> */}
                     </div>
                     <div className="mt-4 mb-6 space-y-3">
                         <a
@@ -244,13 +244,13 @@ export default function Home() {
                         <a href="./images/full/lattice/latticehris-directory.png">
                             <img
                                 src="./images/full/lattice/latticehris-directory.png"
-                                className="border bg-emerald-50 border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-center p-2 hover:shadow-xl transform hover:-translate-y-0.5 transition"
+                                className="border bg-emerald-50 border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left-top pl-1 pt-2 hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
                         <a href="./images/full/lattice/latticehris-handoff.png">
                             <img
                                 src="./images/full/lattice/latticehris-handoff.png"
-                                className="border bg-slate-50 border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover p-1 object-right-bottom hover:shadow-xl transform hover:-translate-y-0.5 transition"
+                                className="border bg-[#f5f5f5] border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover p-1 object-right-bottom hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
                     </div>
@@ -346,33 +346,41 @@ export default function Home() {
                             Documentation Header
                         </h3>
                         <p className="text-lg text-slate-500">
-                            A powerful, lil documentation component that can be
-                            dropped into any file to add context to a mock-up,
+                            A powerful, lil documentation component used by more
+                            than 1.3k Figma users. It can be dropped into any
+                            Figma or FigJam file to add context to a mock-up,
                             describe a workflow, or annotate your work.
+                        </p>
+                        <p className="text-lg text-slate-500">
+                            I've rebuilt this component several times to take
+                            advantage of the latest Figma features, including
+                            component properties and newer versions of Auto
+                            Layout, to provide greater flexibility and faster
+                            loading times.
                         </p>
                     </div>
                     <div className="mt-6">
                         <a
-                            href="./images/full/documentation header/01 documentation header.png"
+                            href="./images/full/documentation header/documentation-header-v3.png"
                             className="max-w-full"
                         >
                             <img
-                                src="./images/full/documentation header/01 documentation header.png"
-                                className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"
+                                src="./images/full/documentation header/documentation-header-v3.png"
+                                className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
                     </div>
                     <div className="mt-3 flex grid-cols-2 gap-3">
-                        <a href="./images/full/documentation header/02 documentation in use.png">
+                        <a href="./images/full/documentation header/documentation-header-v2.png">
                             <img
-                                src="./images/full/documentation header/02 documentation in use.png"
-                                className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
+                                src="./images/full/documentation header/documentation-header-v2.png"
+                                className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-center hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
-                        <a href="./images/full/documentation header/03 documentation text width.png">
+                        <a href="./images/full/documentation header/documentation-header-outlines.png">
                             <img
-                                src="./images/full/documentation header/03 documentation text width.png"
-                                className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left hover:shadow-xl transform hover:-translate-y-0.5 transition"
+                                src="./images/full/documentation header/documentation-header-outlines.png"
+                                className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
                     </div>
