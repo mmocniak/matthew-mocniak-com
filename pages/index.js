@@ -13,6 +13,11 @@ export default function Home() {
                 />
                 <meta property="og:image" content="./images/meta.png" />
                 <link rel="icon" href="/favicon.ico" />
+                <script
+                    src="https://cdn.usefathom.com/script.js"
+                    data-site="AUCODXWK"
+                    defer
+                ></script>
             </Head>
 
             <main className="mx-4 mt-8 mb-48 max-w-full md:mx-8 lg:mx-24 md:max-w-2xl">
