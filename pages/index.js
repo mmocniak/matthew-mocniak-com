@@ -245,7 +245,7 @@ export default function Home() {
                     </div>
                     <div className="mt-4 mb-6 space-y-3">
                         <a
-                            className="mt-4 flex items-center hover:underline text-blue-600 hover:text-blue-500 active:text-blue-800 visited:text-purple-500"
+                            className="mt-4 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 active:text-blue-800 visited:text-purple-500 dark:visited:text-purple-400"
                             href="https://lattice.com/blog/introducing-lattice-hris"
                             target="_blank"
                         >
@@ -319,7 +319,7 @@ export default function Home() {
                     </div>
                     <div className="mt-4 mb-6 space-y-2">
                         <a
-                            className="mt-6 flex items-center hover:underline text-blue-600 hover:text-blue-500 active:text-blue-800 visited:text-purple-500"
+                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 active:text-blue-800 visited:text-purple-500 dark:visited:text-purple-400"
                             href="https://www.axios.com/pro/health-tech-deals/2022/06/01/exclusive-spectrumai-raises-9m-virtual-autism-care"
                             target="_blank"
                         >
@@ -327,7 +327,7 @@ export default function Home() {
                             Innovation →
                         </a>
                         <a
-                            className="mt-6 flex items-center hover:underline text-blue-600 hover:text-blue-500 active:text-blue-800 visited:text-purple-500"
+                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 active:text-blue-800 visited:text-purple-500 dark:visited:text-purple-400"
                             href="https://bhbusiness.com/2023/03/16/cvs-health-ventures-leads-20m-investment-in-aba-data-collection-startup-spectrumai/"
                             target="_blank"
                         >
