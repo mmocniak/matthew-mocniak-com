@@ -301,7 +301,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-bold text-xl text-primary-light dark:text-primary-dark">
+                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
                             SpectrumAi
                         </h3>
                         <p className="text-lg text-secondary-light dark:text-secondary-dark">
@@ -375,7 +375,7 @@ export default function Home() {
                     </div>
 
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-bold text-xl text-primary-light dark:text-primary-dark">
+                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
                             Documentation Header
                         </h3>
                         <p className="text-lg text-secondary-light dark:text-secondary-dark">
@@ -434,7 +434,7 @@ export default function Home() {
                         </a>
                     </button>
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-bold text-xl text-primary-light dark:text-primary-dark">
+                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
                             Vaxfinder
                         </h3>
                         <p className="text-lg text-secondary-light dark:text-secondary-dark">
@@ -464,7 +464,7 @@ export default function Home() {
             <a href="https://vaxfinder.mass.gov/" alt="Vaxfinder" className="w-full justify-center bg-white border border-slate-700 border-opacity-20 text-blue-600 px-5 py-3 rounded filter drop-shadow-btn hover:bg-slate-100 hover:text-blue-500 active:bg-slate-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100">Go to vaxfinder.mass.org</a>
             </button> */}
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-bold text-xl text-primary-light dark:text-primary-dark">
+                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
                             Matchwell
                         </h3>
                         <p className="text-lg text-secondary-light dark:text-secondary-dark">
