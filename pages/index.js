@@ -100,14 +100,11 @@ export default function Home() {
                                 href="https://www.lattice.com"
                                 className="flex justify-between group"
                             >
-                                <div>
+                                <div className="text-secondary-light dark:text-secondary-dark">
                                     <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         Lattice
                                     </span>
-                                    ,{" "}
-                                    <span className="text-secondary-light dark:text-secondary-dark">
-                                        Senior Product Designer
-                                    </span>
+                                    , Senior Product Designer
                                 </div>
                                 <span className="text-slate-400 dark:text-slate-500">
                                     2022–
@@ -120,14 +117,11 @@ export default function Home() {
                                 href="https://www.viget.com"
                                 className="flex justify-between group"
                             >
-                                <div>
+                                <div className="text-secondary-light dark:text-secondary-dark">
                                     <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         Viget
                                     </span>
-                                    ,{" "}
-                                    <span className="text-secondary-light dark:text-secondary-dark">
-                                        Senior Product Designer
-                                    </span>
+                                    , Senior Product Designer
                                 </div>
                                 <span className="text-slate-400 dark:text-slate-500">
                                     2019–22
@@ -140,14 +134,11 @@ export default function Home() {
                                 href="https://www.kitcosets.com"
                                 className="flex justify-between group"
                             >
-                                <div>
+                                <div className="text-secondary-light dark:text-secondary-dark">
                                     <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         KitCo Sets
                                     </span>
-                                    ,{" "}
-                                    <span className="text-secondary-light dark:text-secondary-dark">
-                                        Co-founder
-                                    </span>
+                                    , Co-founder
                                 </div>
                                 <span className="text-slate-400 dark:text-slate-500">
                                     2019–22
@@ -160,14 +151,11 @@ export default function Home() {
                                 href="https://www.redhat.com"
                                 className="flex justify-between group"
                             >
-                                <div>
+                                <div className="text-secondary-light dark:text-secondary-dark">
                                     <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         Red Hat
                                     </span>
-                                    ,{" "}
-                                    <span className="text-secondary-light dark:text-secondary-dark">
-                                        Product Designer
-                                    </span>
+                                    , Product Designer
                                 </div>
                                 <span className="text-slate-400 dark:text-slate-500">
                                     2019
@@ -180,14 +168,11 @@ export default function Home() {
                                 href="https://www.ibm.com"
                                 className="flex justify-between group"
                             >
-                                <div>
+                                <div className="text-secondary-light dark:text-secondary-dark">
                                     <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         IBM
                                     </span>
-                                    ,{" "}
-                                    <span className="text-secondary-light dark:text-secondary-dark">
-                                        UX Designer
-                                    </span>
+                                    , UX Designer
                                 </div>
                                 <span className="text-slate-400 dark:text-slate-500">
                                     2016–19
@@ -200,14 +185,11 @@ export default function Home() {
                                 href="https://www.ibm.com"
                                 className="flex justify-between group"
                             >
-                                <div>
+                                <div className="text-secondary-light dark:text-secondary-dark">
                                     <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         IBM
                                     </span>
-                                    ,{" "}
-                                    <span className="text-secondary-light dark:text-secondary-dark">
-                                        Business Analyst
-                                    </span>
+                                    , Business Analyst
                                 </div>
                                 <span className="text-slate-400 dark:text-slate-500">
                                     2014–16
@@ -245,7 +227,7 @@ export default function Home() {
                     </div>
                     <div className="mt-4 mb-6 space-y-3">
                         <a
-                            className="mt-4 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 active:text-blue-800 visited:text-purple-500 dark:visited:text-purple-400"
+                            className="mt-4 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 visited:text-purple-500 dark:visited:text-purple-400"
                             href="https://lattice.com/blog/introducing-lattice-hris"
                             target="_blank"
                         >
@@ -319,7 +301,7 @@ export default function Home() {
                     </div>
                     <div className="mt-4 mb-6 space-y-2">
                         <a
-                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 active:text-blue-800 visited:text-purple-500 dark:visited:text-purple-400"
+                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 visited:text-purple-500 dark:visited:text-purple-400"
                             href="https://www.axios.com/pro/health-tech-deals/2022/06/01/exclusive-spectrumai-raises-9m-virtual-autism-care"
                             target="_blank"
                         >
@@ -327,7 +309,7 @@ export default function Home() {
                             Innovation →
                         </a>
                         <a
-                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 active:text-blue-800 visited:text-purple-500 dark:visited:text-purple-400"
+                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 dark:visited:text-purple-400"
                             href="https://bhbusiness.com/2023/03/16/cvs-health-ventures-leads-20m-investment-in-aba-data-collection-startup-spectrumai/"
                             target="_blank"
                         >
@@ -421,7 +403,7 @@ export default function Home() {
                         <a
                             href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component"
                             alt="View on Figma Community"
-                            className="flex items-center w-full justify-center bg-white dark:bg-zinc-900 border border-slate-700 dark:border-zinc-600 border-opacity-20 text-blue-600 dark:text-blue-500 dark:font-medium  pl-4 pr-5 py-3 rounded-lg filter drop-shadow-btn hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-blue-500 dark:hover:text-blue-400 active:bg-slate-200 dark:active:bg-zinc-950 active:text-blue-800 dark:active:text-blue-100 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100"
+                            className="flex items-center w-full justify-center bg-white dark:bg-zinc-800 border border-slate-700 dark:border-zinc-600 border-opacity-20 text-blue-600 dark:text-blue-400 dark:font-medium  pl-4 pr-5 py-3 rounded-lg filter drop-shadow-btn hover:bg-slate-100 dark:hover:bg-zinc-700 hover:text-blue-500 dark:hover:text-blue-300 active:bg-slate-200 dark:active:bg-zinc-950 active:text-blue-800 dark:active:text-blue-100 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100"
                         >
                             <img
                                 src="./images/socials/figma.svg"
