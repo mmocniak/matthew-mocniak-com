@@ -3,9 +3,15 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
     purge: ["./pages/*.{js,ts,jsx,tsx}"],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: "media", // or 'media' or 'class'
     theme: {
         extend: {
+            textColor: {
+                "primary-light": "#1e293b", // Equivalent to colors.slate.800
+                "primary-dark": "#e2e8f0", // Equivalent to colors.slate.200
+                "secondary-light": "#475569", // Equivalent to colors.slate.600
+                "secondary-dark": "#94a3b8", // Equivalent to colors.slate.400
+            },
             colors: {
                 transparent: "transparent",
             },
@@ -14,8 +20,6 @@ module.exports = {
                 inner: "inset 0px 2px 0px rgba(0, 0, 0, 0.1), inset 0px 3px 0px rgba(0, 0, 0, 0.055)",
             },
             backgroundImage: (theme) => ({
-                signature: "url('/signature.png')",
-                "footer-texture": "url('/img/footer-texture.png')",
                 "custom-gradient":
                     "linear-gradient(180deg, #4B72B4 0%, #4A71B3 11.79%, #4970B1 21.38%, #476DAD 29.12%, #456AA8 35.34%, #4266A2 40.37%, #3E619C 44.56%, #3B5C95 48.24%, #37568D 51.76%, #325185 55.44%, #2E4B7C 59.63%, #2A4574 64.66%, #263F6C 70.88%, #213964 78.62%, #1E345C 88.21%, #1A2F55 100%)",
             }),
