@@ -1,8 +1,66 @@
 import Head from "next/head";
+import { useEffect, useState } from "react"; // Import useEffect from React
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+    const [copied, setCopied] = useState(false);
+    const [lightbox, setLightbox] = useState({
+        isOpen: false,
+        imageSrc: "",
+    });
+
+    useEffect(() => {
+        const emailContainer = document.getElementById("email-container");
+        const emailSpan = document.getElementById("email");
+
+        emailContainer.addEventListener("click", () => {
+            const email = emailSpan.textContent;
+
+            navigator.clipboard
+                .writeText(email)
+                .then(() => {
+                    setCopied(true);
+                    setTimeout(() => {
+                        setCopied(false);
+                    }, 2000);
+                })
+                .catch((err) => {
+                    console.error("Failed to copy: ", err);
+                });
+        });
+    }, []);
+
+    const openLightbox = (imageSrc) => {
+        setLightbox({
+            isOpen: true,
+            imageSrc,
+        });
+        document.body.style.overflow = "hidden";
+    };
+
+    const closeLightbox = () => {
+        setLightbox({
+            isOpen: false,
+            imageSrc: "",
+        });
+        document.body.style.overflow = "unset";
+    };
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape" && lightbox.isOpen) {
+                closeLightbox();
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [lightbox.isOpen]); // Dependency array ensures this runs only when lightbox state changes
+
     return (
         <div className="mx-auto mt-8 mb-48 max-w-full md:max-w-2xl p-4 sm:p-8 bg">
             <Head>
@@ -75,9 +133,9 @@ export default function Home() {
                             </svg>
                             @matthew_mocniak
                         </a>
-                        <a
-                            className="p-1 flex items-center hover:underline hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100"
-                            href="mailto:matthew.m@hey.com"
+                        <span
+                            id="email-container"
+                            className="p-1 flex items-center hover:underline hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 cursor-pointer"
                         >
                             <img
                                 src="./images/socials/hey.svg"
@@ -85,8 +143,15 @@ export default function Home() {
                                 width="30"
                                 height="30"
                             />
-                            matthew.m@hey.com
-                        </a>
+                            <span
+                                id="email"
+                                className="flex-1 w-full inline-block"
+                            >
+                                {copied
+                                    ? "Copied to clipboard ✓"
+                                    : "matthew.m@hey.com"}
+                            </span>
+                        </span>
                     </div>
                 </div>
                 {/* Work history */}
@@ -95,6 +160,23 @@ export default function Home() {
                         Experience
                     </div>
                     <ul className="text-lg space-y-6 w-auto sm:mr-4">
+                        <li>
+                            <a
+                                href="https://www.zapier.com"
+                                className="flex justify-between group"
+                            >
+                                <div className="text-secondary-light dark:text-secondary-dark">
+                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                        Zapier
+                                    </span>
+                                    , Senior Product Designer
+                                </div>
+                                <span className="text-slate-400 dark:text-slate-500">
+                                    2024–
+                                </span>
+                            </a>
+                        </li>
+
                         <li>
                             <a
                                 href="https://www.lattice.com"
@@ -107,7 +189,7 @@ export default function Home() {
                                     , Senior Product Designer
                                 </div>
                                 <span className="text-slate-400 dark:text-slate-500">
-                                    2022–
+                                    2022–24
                                 </span>
                             </a>
                         </li>
@@ -235,39 +317,53 @@ export default function Home() {
                         </a>
                     </div>
                     <div className="mt-6">
-                        <a
-                            href="./images/full/lattice/latticehris-profile.png"
-                            className="max-w-full"
-                        >
-                            <img
-                                src="./images/full/lattice/latticehris-profile.png"
-                                className="border bg-emerald-50 border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover object-left-top pl-2 pt-4 hover:shadow-xl transform hover:-translate-y-0.5 transition"
-                            ></img>
-                        </a>
+                        <img
+                            src="/images/projects/lattice/latticehris-profile.png"
+                            alt="Lattice HRIS user profile"
+                            className="border bg-emerald-50 dark:bg-emerald-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top p-0 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/lattice/latticehris-profile.png"
+                                )
+                            }
+                        />
                     </div>
-                    {/* <Image
-                        src="/images/full/lattice/latticehris-profile.png"
-                        alt="Description of the image" // Always include an alt attribute for accessibility.
-                        width="3312"
-                        height="2164"
-                        layout="responsive"
-                        objectFit="cover"
-                        objectPosition="left top"
-                        className="border bg-emerald-50 border-slate-700 border-opacity-20 shadow-sm rounded-md hover:shadow-xl transform hover:-translate-y-0.5 transition"
-                    /> */}
-                    <div className="mt-3 flex grid-cols-2 gap-3">
-                        <a href="./images/full/lattice/latticehris-directory.png">
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/lattice/latticehris-directory.png"
+                            alt="Lattice HRIS directory"
+                            className="border bg-emerald-50 dark:bg-emerald-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-screen object-cover object-left-top p-0 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/lattice/latticehris-directory.png"
+                                )
+                            }
+                        />
+                    </div>
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/lattice/latticehris-handoff.png"
+                            alt="Design documentation for handing off a feature to my engineering team"
+                            className="border bg-zinc-100 dark:bg-zinc-900 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-screen object-cover object-left-bottom p-0 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/lattice/latticehris-handoff.png"
+                                )
+                            }
+                        />
+
+                        {/* <a href="./images/projects/lattice/thumbs/latticehris-directory.webp">
                             <img
-                                src="./images/full/lattice/latticehris-directory.png"
+                                src="./images/projects/lattice/thumbs/latticehris-directory.webp"
                                 className="border bg-emerald-50 border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left-top pl-1 pt-2 hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
-                        </a>
-                        <a href="./images/full/lattice/latticehris-handoff.png">
+                        </a> */}
+                        {/* <a href="./images/projects/lattice/latticehris-handoff.png">
                             <img
-                                src="./images/full/lattice/latticehris-handoff.png"
+                                src="./images/projects/lattice/latticehris-handoff.png"
                                 className="border bg-[#f5f5f5] border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover p-1 object-right-bottom hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
-                        </a>
+                        </a> */}
                     </div>
                     <div class="flex flex-col flex-shrink-0 md:flex-row items-center w-full mt-6">
                         <button
@@ -319,29 +415,65 @@ export default function Home() {
                     </div>
 
                     <div className="mt-6">
+                        <img
+                            src="/images/projects/spectrumai/spectrumai-ipads.png"
+                            alt="SpectrumAi session tracking tool"
+                            className="border bg-indigo-200 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-scale-down p-6 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/spectrumai/spectrumai-ipads.png"
+                                )
+                            }
+                        />
+                    </div>
+                    {/* <div className="mt-6">
                         <a
-                            href="./images/full/spectrumai/spectrumai-ipads.png"
+                            href="./images/projects/spectrumai/spectrumai-ipads.png"
                             className="max-w-full"
                         >
                             <img
-                                src="./images/full/spectrumai/spectrumai-ipads.png"
+                                src="./images/projects/spectrumai/spectrumai-ipads.png"
                                 className="border bg-indigo-200 border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-scale-down p-6 hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
+                    </div> */}
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/spectrumai/spectrumai-treatment plan.png"
+                            alt="SpectrumAi treatment plan builder"
+                            className="border bg-indigo-50 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top p-2 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/spectrumai/spectrumai-treatment plan.png"
+                                )
+                            }
+                        />
                     </div>
-                    <div className="mt-3 flex grid-cols-2 gap-3">
-                        <a href="./images/full/spectrumai/spectrumai-treatment plan.png">
+                    {/* <div className="mt-3 flex grid-cols-2 gap-3">
+                        <a href="./images/projects/spectrumai/spectrumai-treatment plan.png">
                             <img
-                                src="./images/full/spectrumai/spectrumai-treatment plan.png"
+                                src="./images/projects/spectrumai/spectrumai-treatment plan.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
-                        <a href="./images/full/spectrumai/spectrumai-iterations.png">
+                        <a href="./images/projects/spectrumai/spectrumai-iterations.png">
                             <img
-                                src="./images/full/spectrumai/spectrumai-iterations.png"
+                                src="./images/projects/spectrumai/spectrumai-iterations.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
+                    </div> */}
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/spectrumai/spectrumai-iterations.png"
+                            alt="Iterations for making the in-session UI page"
+                            className="border bg-indigo-50 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top p-2 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/spectrumai/spectrumai-iterations.png"
+                                )
+                            }
+                        />
                     </div>
                     <div class="flex flex-col flex-shrink-0 md:flex-row items-center w-full mt-6">
                         <button
@@ -375,29 +507,65 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="mt-6">
+                        <img
+                            src="/images/projects/documentation header/documentation-header-v3.png"
+                            alt="An overview of the third version of the documentation header component"
+                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/documentation header/documentation-header-v3.png"
+                                )
+                            }
+                        />
+                    </div>
+                    {/* <div className="mt-6">
                         <a
-                            href="./images/full/documentation header/documentation-header-v3.png"
+                            href="./images/projects/documentation header/documentation-header-v3.png"
                             className="max-w-full"
                         >
                             <img
-                                src="./images/full/documentation header/documentation-header-v3.png"
+                                src="./images/projects/documentation header/documentation-header-v3.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
+                    </div> */}
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/documentation header/documentation-header-v2.png"
+                            alt="An overview of the second version of the documentation header component"
+                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/documentation header/documentation-header-v2.png"
+                                )
+                            }
+                        />
                     </div>
-                    <div className="mt-3 flex grid-cols-2 gap-3">
-                        <a href="./images/full/documentation header/documentation-header-v2.png">
+                    {/* <div className="mt-3 flex grid-cols-2 gap-3">
+                        <a href="./images/projects/documentation header/documentation-header-v2.png">
                             <img
-                                src="./images/full/documentation header/documentation-header-v2.png"
+                                src="./images/projects/documentation header/documentation-header-v2.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-center hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
-                        <a href="./images/full/documentation header/documentation-header-outlines.png">
+                        <a href="./images/projects/documentation header/documentation-header-outlines.png">
                             <img
-                                src="./images/full/documentation header/documentation-header-outlines.png"
+                                src="./images/projects/documentation header/documentation-header-outlines.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-left-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
+                    </div> */}
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/documentation header/documentation-header-outlines.png"
+                            alt="A comparison of the three versions of the documentation header component, illustrated as outlines of each component"
+                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/documentation header/documentation-header-outlines.png"
+                                )
+                            }
+                        />
                     </div>
                     <button className="flex w-full md:w-auto mt-6 group">
                         <a
@@ -428,23 +596,44 @@ export default function Home() {
                             hosted around 40,000 concurrent users.
                         </p>
                     </div>
-                    <div className="mt-6 flex grid-cols-2 gap-3">
-                        <a href="./images/full/vaxfinder/vaxfinder mobile.png">
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/vaxfinder/vaxfinder mobile.png"
+                            alt="Screenshots of the Vaxfinder website on mobile"
+                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/vaxfinder/vaxfinder mobile.png"
+                                )
+                            }
+                        />
+                    </div>
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/vaxfinder/vaxfinder desktop.png"
+                            alt="A detailed screenshot of the Vaxfinder website on desktop"
+                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/vaxfinder/vaxfinder desktop.png"
+                                )
+                            }
+                        />
+                    </div>
+                    {/* <div className="mt-6 flex grid-cols-2 gap-3">
+                        <a href="./images/projects/vaxfinder/vaxfinder mobile.png">
                             <img
-                                src="../images/full/vaxfinder/vaxfinder mobile.png"
+                                src="../images/projects/vaxfinder/vaxfinder mobile.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
-                        <a href="./images/full/vaxfinder/vaxfinder desktop.png">
+                        <a href="./images/projects/vaxfinder/vaxfinder desktop.png">
                             <img
-                                src="./images/full/vaxfinder/vaxfinder desktop.png"
+                                src="./images/projects/vaxfinder/vaxfinder desktop.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
-                    </div>
-                    {/* <button className="flex w-full md:w-auto mt-6 group">
-            <a href="https://vaxfinder.mass.gov/" alt="Vaxfinder" className="w-full justify-center bg-white border border-slate-700 border-opacity-20 text-blue-600 px-5 py-3 rounded filter drop-shadow-btn hover:bg-slate-100 hover:text-blue-500 active:bg-slate-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100">Go to vaxfinder.mass.org</a>
-            </button> */}
+                    </div> */}
                     <div className="mt-28 space-y-3 sm:mr-4">
                         <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
                             Matchwell
@@ -458,30 +647,66 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="mt-6">
+                        <img
+                            src="/images/projects/matchwell/01 matchwell mobile.png"
+                            alt="Screenshots of the Matchwell web app on mobile"
+                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/matchwell/01 matchwell mobile.png"
+                                )
+                            }
+                        />
+                    </div>
+                    {/* <div className="mt-6">
                         <a
-                            href="./images/full/matchwell/01 matchwell mobile.png"
+                            href="./images/projects/matchwell/01 matchwell mobile.png"
                             className="max-w-full"
                         >
                             <img
-                                src="./images/full/matchwell/01 matchwell mobile.png"
+                                src="./images/projects/matchwell/01 matchwell mobile.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
+                    </div> */}
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/matchwell/02 matchwell desktop.png"
+                            alt="An image of the Matchwell candidates experience on desktop"
+                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/matchwell/02 matchwell desktop.png"
+                                )
+                            }
+                        />
                     </div>
-                    <div className="mt-3 flex grid-cols-2 gap-3">
-                        <a href="./images/full/matchwell/02 matchwell desktop.png">
+                    <div className="mt-6">
+                        <img
+                            src="/images/projects/matchwell/03 matchwell documentation.png"
+                            alt="Design documentation for handing off user profile designs to my engineering team"
+                            className="border bg-indigo-50 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-top pt-4 px-4 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            onClick={() =>
+                                openLightbox(
+                                    "/images/projects/matchwell/03 matchwell documentation.png"
+                                )
+                            }
+                        />
+                    </div>
+                    {/* <div className="mt-3 flex grid-cols-2 gap-3">
+                        <a href="./images/projects/matchwell/02 matchwell desktop.png">
                             <img
-                                src="./images/full/matchwell/02 matchwell desktop.png"
+                                src="./images/projects/matchwell/02 matchwell desktop.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
-                        <a href="./images/full/matchwell/03 matchwell documentation.png">
+                        <a href="./images/projects/matchwell/03 matchwell documentation.png">
                             <img
-                                src="./images/full/matchwell/03 matchwell documentation.png"
+                                src="./images/projects/matchwell/03 matchwell documentation.png"
                                 className="border border-slate-700 border-opacity-20 shadow-sm rounded-md h-56 w-screen object-cover object-top hover:shadow-xl transform hover:-translate-y-0.5 transition"
                             ></img>
                         </a>
-                    </div>
+                    </div> */}
                     <div className="mt-20 pb-2 text-lg text-secondary-light dark:text-secondary-dark">
                         Thanks for visiting, I hope you like my stuff!
                     </div>
@@ -509,6 +734,26 @@ export default function Home() {
                     </div>
                 </div>
             </main>
+
+            {lightbox.isOpen && (
+                <div
+                    className="fixed inset-0 bg-slate-950 bg-opacity-70 z-50 flex items-center justify-center p-4"
+                    onClick={closeLightbox}
+                >
+                    <button
+                        className="absolute top-4 right-4 text-white text-xl p-2"
+                        onClick={closeLightbox}
+                    >
+                        ✕
+                    </button>
+                    <img
+                        src={lightbox.imageSrc}
+                        alt="Enlarged view"
+                        className="max-h-[90vh] max-w-[90vw] object-contain"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                </div>
+            )}
         </div>
     );
 }
