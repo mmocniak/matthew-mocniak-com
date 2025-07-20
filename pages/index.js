@@ -737,7 +737,7 @@ export default function Home() {
 
             {lightbox.isOpen && (
                 <div
-                    className="fixed inset-0 bg-slate-950 bg-opacity-70 dark:bg-opacity-90 z-50 flex items-center justify-center p-4"
+                    className="fixed inset-0 bg-slate-950 bg-opacity-90 dark:bg-opacity-90 z-50 flex items-center justify-center p-4"
                     onClick={closeLightbox}
                 >
                     <button
