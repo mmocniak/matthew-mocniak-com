@@ -7,10 +7,23 @@ module.exports = {
     theme: {
         extend: {
             textColor: {
+                // Legacy colors (kept for backward compatibility)
                 "primary-light": "#1e293b", // Equivalent to colors.slate.800
                 "primary-dark": "#e2e8f0", // Equivalent to colors.slate.200
                 "secondary-light": "#475569", // Equivalent to colors.slate.600
                 "secondary-dark": "#94a3b8", // Equivalent to colors.slate.400
+
+                // New text scale system
+                "weakest-light": "#94a3b8", // slate-400
+                "weakest-dark": "#64748b", // slate-500
+                "weaker-light": "#475569", // slate-600 (was secondary-light)
+                "weaker-dark": "#94a3b8", // slate-400 (was secondary-dark)
+                "default-light": "#1e293b", // slate-800 (was primary-light)
+                "default-dark": "#e2e8f0", // slate-200 (was primary-dark)
+                "stronger-light": "#0f172a", // slate-900
+                "stronger-dark": "#f1f5f9", // slate-100
+                "strongest-light": "#020617", // slate-950
+                "strongest-dark": "#f8fafc", // slate-50
             },
             colors: {
                 transparent: "transparent",

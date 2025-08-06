@@ -19,3 +19,129 @@ html {
         --stroke-color-dark: #374151; /* Dark mode */
     }
 }
+
+/* Design System - Text Scale Utilities */
+@layer components {
+    /* Text Scale Classes */
+    .text-weakest {
+        @apply text-weakest-light dark:text-weakest-dark;
+    }
+
+    .text-weaker {
+        @apply text-weaker-light dark:text-weaker-dark;
+    }
+
+    .text-default {
+        @apply text-default-light dark:text-default-dark;
+    }
+
+    .text-stronger {
+        @apply text-stronger-light dark:text-stronger-dark;
+    }
+
+    .text-strongest {
+        @apply text-strongest-light dark:text-strongest-dark;
+    }
+
+    /* Typography Components */
+    .heading-display {
+        @apply text-4xl sm:text-5xl md:text-6xl font-semibold text-strongest;
+    }
+
+    .heading-1 {
+        @apply text-4xl sm:text-5xl font-semibold text-default;
+    }
+
+    .heading-2 {
+        @apply text-2xl sm:text-3xl font-semibold text-default;
+    }
+
+    .heading-3 {
+        @apply text-xl sm:text-2xl font-semibold text-default;
+    }
+
+    .heading-4 {
+        @apply text-lg sm:text-xl font-semibold text-default;
+    }
+
+    .body-large {
+        @apply text-lg sm:text-xl text-weaker;
+    }
+
+    .body {
+        @apply text-base sm:text-lg text-weaker;
+    }
+
+    .body-small {
+        @apply text-sm sm:text-base text-weaker;
+    }
+
+    .caption {
+        @apply text-xs sm:text-sm text-weakest;
+    }
+
+    .label {
+        @apply text-sm font-medium uppercase tracking-wider text-weaker;
+    }
+
+    /* Component Classes */
+    .btn-primary {
+        @apply flex items-center justify-center px-5 py-3 
+               bg-white dark:bg-zinc-800 
+               border border-slate-700 border-opacity-20 dark:border-zinc-600
+               text-blue-600 dark:text-blue-400 
+               rounded-lg drop-shadow-btn 
+               hover:bg-slate-100 dark:hover:bg-zinc-700 
+               hover:text-blue-500 dark:hover:text-blue-300
+               active:bg-slate-200 dark:active:bg-zinc-950 
+               active:text-blue-800 dark:active:text-blue-100
+               active:shadow-inner
+               focus:outline-none focus:ring-4 focus:ring-offset-2
+               transition duration-100;
+    }
+
+    .btn-disabled {
+        @apply disabled:bg-slate-200 dark:disabled:bg-zinc-600 
+               disabled:text-slate-400 dark:disabled:text-zinc-900 
+               disabled:border-none disabled:shadow-none 
+               disabled:drop-shadow-none disabled:cursor-not-allowed;
+    }
+
+    .link-primary {
+        @apply text-blue-600 dark:text-blue-400 
+               hover:text-blue-500 dark:hover:text-blue-300 
+               hover:underline 
+               active:text-blue-800 dark:active:text-blue-100
+               transition-colors;
+    }
+
+    .link-external {
+        @apply p-1 flex items-center 
+               hover:underline 
+               hover:text-blue-500 dark:hover:text-blue-300 
+               active:text-blue-800 dark:active:text-blue-100;
+    }
+
+    .project-image {
+        @apply border border-slate-700 border-opacity-5 
+               shadow-sm rounded 
+               h-56 sm:h-64 md:h-96 
+               w-full object-cover object-left-top 
+               hover:shadow-md 
+               transform hover:-translate-y-0.5 
+               transition cursor-pointer;
+    }
+
+    .section-divider {
+        @apply border-b border-slate-700 border-opacity-20 dark:border-opacity-50 
+               pb-2 text-weaker text-sm font-semibold uppercase;
+    }
+
+    .container-main {
+        @apply mx-auto mt-8 mb-48 max-w-full md:max-w-2xl p-4 sm:p-8;
+    }
+
+    .container-section {
+        @apply mt-16 space-y-6;
+    }
+}

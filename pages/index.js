@@ -62,7 +62,7 @@ export default function Home() {
     }, [lightbox.isOpen]); // Dependency array ensures this runs only when lightbox state changes
 
     return (
-        <div className="mx-auto mt-8 mb-48 max-w-full md:max-w-2xl p-4 sm:p-8 bg">
+        <div className="container-main">
             <Head>
                 <title>Matthew Mocniak</title>
                 <meta
@@ -84,10 +84,8 @@ export default function Home() {
                     </div>
 
                     <div className="mt-8 space-y-4 sm:space-y-6">
-                        <h1 className="text-4xl sm:text-5xl font-semibold text-primary-light dark:text-primary-dark">
-                            Matthew Mocniak
-                        </h1>
-                        <h2 className="text-xl sm:text-2xl text-secondary-light dark:text-secondary-dark">
+                        <h1 className="heading-1">Matthew Mocniak</h1>
+                        <h2 className="body-large">
                             I'm a software designer with a keen attention to
                             detail. I love working closely with other designers
                             and developers to deliver excellent products and
@@ -97,7 +95,7 @@ export default function Home() {
 
                     <div className="mt-8 px-3 py-2 space-y-2 text-base rounded-xl bg-indigo-50 dark:bg-indigo-950 dark:bg-opacity-40 text-blue-600 dark:text-blue-400 border border-blue-600 border-opacity-10 dark:border-opacity-20 md:grid md:grid-flow-col md:content-center md:space-y-0">
                         <a
-                            className="p-1 flex items-center hover:underline hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100"
+                            className="link-external"
                             href="https://www.figma.com/@matthew_mocniak"
                             target="_blank"
                         >
@@ -110,7 +108,7 @@ export default function Home() {
                             @matthew_mocniak
                         </a>
                         <a
-                            className="p-1 flex items-center hover:underline hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100"
+                            className="link-external"
                             href="https://www.threads.net/@matthew_mocniak"
                             target="_blank"
                         >
@@ -135,7 +133,7 @@ export default function Home() {
                         </a>
                         <span
                             id="email-container"
-                            className="p-1 flex items-center hover:underline hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 cursor-pointer"
+                            className="link-external cursor-pointer"
                         >
                             <img
                                 src="./images/socials/hey.svg"
@@ -155,25 +153,21 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Work history */}
-                <div className="mt-16 space-y-6">
-                    <div className="border-b border-slate-700 border-opacity-20 dark:border-opacity-50 pb-2 text-secondary-light dark:text-secondary-dark text-sm font-semibold uppercase">
-                        Experience
-                    </div>
+                <div className="container-section">
+                    <div className="section-divider">Experience</div>
                     <ul className="text-lg space-y-6 w-auto sm:mr-4">
                         <li>
                             <a
                                 href="https://www.zapier.com"
                                 className="flex justify-between group"
                             >
-                                <div className="text-secondary-light dark:text-secondary-dark">
-                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                <div className="text-weaker">
+                                    <span className="text-default font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         Zapier
                                     </span>
                                     , Senior Product Designer
                                 </div>
-                                <span className="text-slate-400 dark:text-slate-500">
-                                    2024–
-                                </span>
+                                <span className="text-weakest">2024–</span>
                             </a>
                         </li>
 
@@ -182,15 +176,13 @@ export default function Home() {
                                 href="https://www.lattice.com"
                                 className="flex justify-between group"
                             >
-                                <div className="text-secondary-light dark:text-secondary-dark">
-                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                <div className="text-weaker">
+                                    <span className="text-default font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         Lattice
                                     </span>
                                     , Senior Product Designer
                                 </div>
-                                <span className="text-slate-400 dark:text-slate-500">
-                                    2022–24
-                                </span>
+                                <span className="text-weakest">2022–24</span>
                             </a>
                         </li>
 
@@ -199,15 +191,13 @@ export default function Home() {
                                 href="https://www.viget.com"
                                 className="flex justify-between group"
                             >
-                                <div className="text-secondary-light dark:text-secondary-dark">
-                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                <div className="text-weaker">
+                                    <span className="text-default font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         Viget
                                     </span>
                                     , Senior Product Designer
                                 </div>
-                                <span className="text-slate-400 dark:text-slate-500">
-                                    2019–22
-                                </span>
+                                <span className="text-weakest">2019–22</span>
                             </a>
                         </li>
 
@@ -216,15 +206,13 @@ export default function Home() {
                                 href="https://www.kitcosets.com"
                                 className="flex justify-between group"
                             >
-                                <div className="text-secondary-light dark:text-secondary-dark">
-                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                <div className="text-weaker">
+                                    <span className="text-default font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         KitCo Sets
                                     </span>
                                     , Co-founder
                                 </div>
-                                <span className="text-slate-400 dark:text-slate-500">
-                                    2019–22
-                                </span>
+                                <span className="text-weakest">2019–22</span>
                             </a>
                         </li>
 
@@ -233,15 +221,13 @@ export default function Home() {
                                 href="https://www.redhat.com"
                                 className="flex justify-between group"
                             >
-                                <div className="text-secondary-light dark:text-secondary-dark">
-                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                <div className="text-weaker">
+                                    <span className="text-default font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         Red Hat
                                     </span>
                                     , Product Designer
                                 </div>
-                                <span className="text-slate-400 dark:text-slate-500">
-                                    2019
-                                </span>
+                                <span className="text-weakest">2019</span>
                             </a>
                         </li>
 
@@ -250,15 +236,13 @@ export default function Home() {
                                 href="https://www.ibm.com"
                                 className="flex justify-between group"
                             >
-                                <div className="text-secondary-light dark:text-secondary-dark">
-                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                <div className="text-weaker">
+                                    <span className="text-default font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         IBM
                                     </span>
                                     , UX Designer
                                 </div>
-                                <span className="text-slate-400 dark:text-slate-500">
-                                    2016–19
-                                </span>
+                                <span className="text-weakest">2016–19</span>
                             </a>
                         </li>
 
@@ -267,36 +251,30 @@ export default function Home() {
                                 href="https://www.ibm.com"
                                 className="flex justify-between group"
                             >
-                                <div className="text-secondary-light dark:text-secondary-dark">
-                                    <span className="text-primary-light dark:text-primary-dark font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
+                                <div className="text-weaker">
+                                    <span className="text-default font-medium group-hover:underline group-hover:text-blue-500 dark:group-hover:text-blue-400 active:text-blue-800">
                                         IBM
                                     </span>
                                     , Business Analyst
                                 </div>
-                                <span className="text-slate-400 dark:text-slate-500">
-                                    2014–16
-                                </span>
+                                <span className="text-weakest">2014–16</span>
                             </a>
                         </li>
                     </ul>
                 </div>
                 {/* Recent work to showcase */}
-                <div className="mt-16">
-                    <div className="border-b border-slate-700 border-opacity-20 dark:border-opacity-50 pb-2 text-secondary-light dark:text-secondary-dark text-sm font-semibold uppercase">
-                        Recent Work
-                    </div>
+                <div className="container-section">
+                    <div className="section-divider">Recent Work</div>
                     <div className="mt-6 space-y-3 sm:mr-4">
-                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
-                            Lattice HRIS
-                        </h3>
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <h3 className="heading-4">Lattice HRIS</h3>
+                        <p className="body">
                             I joined a top-secret team as the third designer and
                             worked closely with cross-functional partners to
                             launch Lattice HRIS, transforming Lattice from a
                             suite of talent products to an extensive human
                             resources platform.
                         </p>
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <p className="body">
                             I designed an onboarding experience for new hires,
                             revamped the employee profile, and created
                             beneficial tools for admins to confidently manage
@@ -309,7 +287,7 @@ export default function Home() {
                     </div>
                     <div className="mt-4 mb-6 space-y-3">
                         <a
-                            className="mt-4 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 visited:text-purple-500 dark:visited:text-purple-400"
+                            className="mt-4 flex items-center link-primary visited:text-purple-500 dark:visited:text-purple-400"
                             href="https://lattice.com/blog/introducing-lattice-hris"
                             target="_blank"
                         >
@@ -320,7 +298,7 @@ export default function Home() {
                         <img
                             src="/images/projects/lattice/latticehris-profile.png"
                             alt="Lattice HRIS user profile"
-                            className="border bg-emerald-50 dark:bg-emerald-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top p-0 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image bg-emerald-50 dark:bg-emerald-950 p-0"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/lattice/latticehris-profile.png"
@@ -332,7 +310,7 @@ export default function Home() {
                         <img
                             src="/images/projects/lattice/latticehris-directory.png"
                             alt="Lattice HRIS directory"
-                            className="border bg-emerald-50 dark:bg-emerald-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-screen object-cover object-left-top p-0 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image bg-emerald-50 dark:bg-emerald-950 p-0"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/lattice/latticehris-directory.png"
@@ -344,7 +322,7 @@ export default function Home() {
                         <img
                             src="/images/projects/lattice/latticehris-handoff.png"
                             alt="Design documentation for handing off a feature to my engineering team"
-                            className="border bg-zinc-100 dark:bg-zinc-900 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-screen object-cover object-left-bottom p-0 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image bg-zinc-100 dark:bg-zinc-900 object-left-bottom p-0"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/lattice/latticehris-handoff.png"
@@ -365,30 +343,28 @@ export default function Home() {
                             ></img>
                         </a> */}
                     </div>
-                    <div class="flex flex-col flex-shrink-0 md:flex-row items-center w-full mt-6">
+                    <div className="flex flex-col flex-shrink-0 md:flex-row items-center w-full mt-6">
                         <button
-                            class="flex items-center w-full md:w-auto text-center justify-center md:text-left bg-white border border-slate-700 border-opacity-20 text-blue-600 p-5 py-3 rounded-lg filter drop-shadow-btn hover:bg-slate-100 hover:text-blue-500 active:bg-slate-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100 disabled:bg-slate-200 dark:disabled:bg-zinc-600 disabled:text-slate-400 dark:disabled:text-zinc-900 dark:disabled:font-medium disabled:border-none disabled:shadow-none disabled:drop-shadow-none disabled:cursor-not-allowed"
+                            className="btn-primary btn-disabled w-full md:w-auto"
                             disabled
                         >
                             {/* <img src="./images/socials/figma.svg" alt="Figma" width="24" height="24" class="mr-1 disabled: opacity-50 disabled:cursor-not-allowed"/> */}
                             View case study
                         </button>
-                        <p class="text-sm font-medium text-orange-500 mt-3 md:mt-0 md:ml-3 md:w-auto">
+                        <p className="caption font-medium text-orange-500 mt-3 md:mt-0 md:ml-3 md:w-auto">
                             Coming soon
                         </p>
                     </div>
 
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
-                            SpectrumAi
-                        </h3>
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <h3 className="heading-4">SpectrumAi</h3>
+                        <p className="body">
                             My team and I developed a portable tool to assist
                             technicians in ABA therapy sessions with their
                             clients. The app offers robust curriculum management
                             and powerful in-session tracking tools.
                         </p>{" "}
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <p className="body">
                             It also introduced a novel feature allowing
                             therapists to revisit and accurately document
                             previous sessions, thanks to auto-generated
@@ -397,7 +373,7 @@ export default function Home() {
                     </div>
                     <div className="mt-4 mb-6 space-y-2">
                         <a
-                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 visited:text-purple-500 dark:visited:text-purple-400"
+                            className="mt-6 flex items-center link-primary visited:text-purple-500 dark:visited:text-purple-400"
                             href="https://www.axios.com/pro/health-tech-deals/2022/06/01/exclusive-spectrumai-raises-9m-virtual-autism-care"
                             target="_blank"
                         >
@@ -405,7 +381,7 @@ export default function Home() {
                             Innovation →
                         </a>
                         <a
-                            className="mt-6 flex items-center hover:underline text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 active:text-blue-800 dark:active:text-blue-100 dark:visited:text-purple-400"
+                            className="mt-6 flex items-center link-primary dark:visited:text-purple-400"
                             href="https://bhbusiness.com/2023/03/16/cvs-health-ventures-leads-20m-investment-in-aba-data-collection-startup-spectrumai/"
                             target="_blank"
                         >
@@ -418,7 +394,7 @@ export default function Home() {
                         <img
                             src="/images/projects/spectrumai/spectrumai-ipads.png"
                             alt="SpectrumAi session tracking tool"
-                            className="border bg-indigo-200 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-scale-down p-6 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image bg-indigo-200 dark:bg-indigo-950 object-scale-down p-6"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/spectrumai/spectrumai-ipads.png"
@@ -441,7 +417,7 @@ export default function Home() {
                         <img
                             src="/images/projects/spectrumai/spectrumai-treatment plan.png"
                             alt="SpectrumAi treatment plan builder"
-                            className="border bg-indigo-50 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top p-2 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image bg-indigo-50 dark:bg-indigo-950 p-2"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/spectrumai/spectrumai-treatment plan.png"
@@ -467,7 +443,7 @@ export default function Home() {
                         <img
                             src="/images/projects/spectrumai/spectrumai-iterations.png"
                             alt="Iterations for making the in-session UI page"
-                            className="border bg-indigo-50 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top p-2 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image bg-indigo-50 dark:bg-indigo-950 p-2"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/spectrumai/spectrumai-iterations.png"
@@ -475,30 +451,28 @@ export default function Home() {
                             }
                         />
                     </div>
-                    <div class="flex flex-col flex-shrink-0 md:flex-row items-center w-full mt-6">
+                    <div className="flex flex-col flex-shrink-0 md:flex-row items-center w-full mt-6">
                         <button
-                            class="flex items-center w-full md:w-auto text-center justify-center md:text-left bg-white border border-slate-700 border-opacity-20 text-blue-600 p-5 py-3 rounded-lg filter drop-shadow-btn hover:bg-slate-100 hover:text-blue-500 active:bg-slate-200 active:text-blue-800 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100 disabled:bg-slate-200 dark:disabled:bg-zinc-600 disabled:text-slate-400 dark:disabled:text-zinc-900 dark:disabled:font-medium disabled:border-none disabled:shadow-none disabled:drop-shadow-none disabled:cursor-not-allowed"
+                            className="btn-primary btn-disabled w-full md:w-auto"
                             disabled
                         >
                             {/* <img src="./images/socials/figma.svg" alt="Figma" width="24" height="24" class="mr-1 disabled: opacity-50 disabled:cursor-not-allowed"/> */}
                             View case study
                         </button>
-                        <p class="text-sm font-medium text-orange-500 mt-3 md:mt-0 md:ml-3 md:w-auto">
+                        <p className="caption font-medium text-orange-500 mt-3 md:mt-0 md:ml-3 md:w-auto">
                             Coming soon
                         </p>
                     </div>
 
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
-                            Documentation Header
-                        </h3>
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <h3 className="heading-4">Documentation Header</h3>
+                        <p className="body">
                             A powerful, lil documentation component used by more
                             than 1.3k Figma users. It can be dropped into any
                             Figma or FigJam file to add context to a mock-up,
                             describe a workflow, or annotate your work.
                         </p>
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <p className="body">
                             I've rebuilt this component several times to take
                             advantage of the latest Figma features, including
                             component properties and newer versions of Auto
@@ -510,7 +484,7 @@ export default function Home() {
                         <img
                             src="/images/projects/documentation header/documentation-header-v3.png"
                             alt="An overview of the third version of the documentation header component"
-                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/documentation header/documentation-header-v3.png"
@@ -533,7 +507,7 @@ export default function Home() {
                         <img
                             src="/images/projects/documentation header/documentation-header-v2.png"
                             alt="An overview of the second version of the documentation header component"
-                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/documentation header/documentation-header-v2.png"
@@ -559,7 +533,7 @@ export default function Home() {
                         <img
                             src="/images/projects/documentation header/documentation-header-outlines.png"
                             alt="A comparison of the three versions of the documentation header component, illustrated as outlines of each component"
-                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/documentation header/documentation-header-outlines.png"
@@ -571,7 +545,7 @@ export default function Home() {
                         <a
                             href="https://www.figma.com/community/file/930683346927230979/Documentation-Header-Component"
                             alt="View on Figma Community"
-                            className="flex items-center w-full justify-center bg-white dark:bg-zinc-800 border border-slate-700 dark:border-zinc-600 border-opacity-20 text-blue-600 dark:text-blue-400 dark:font-medium  pl-4 pr-5 py-3 rounded-lg filter drop-shadow-btn hover:bg-slate-100 dark:hover:bg-zinc-700 hover:text-blue-500 dark:hover:text-blue-300 active:bg-slate-200 dark:active:bg-zinc-950 active:text-blue-800 dark:active:text-blue-100 active:shadow-inner focus:outline-none focus:ring-4 focus:ring-offset-2 transition duration-100"
+                            className="btn-primary w-full pl-4 pr-5 dark:font-medium"
                         >
                             <img
                                 src="./images/socials/figma.svg"
@@ -584,10 +558,8 @@ export default function Home() {
                         </a>
                     </button>
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
-                            Vaxfinder
-                        </h3>
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <h3 className="heading-4">Vaxfinder</h3>
+                        <p className="body">
                             I led product design for a website we built in less
                             than one week to collect and display vaccine site
                             details for the Commonwealth of Massachusetts.
@@ -600,7 +572,7 @@ export default function Home() {
                         <img
                             src="/images/projects/vaxfinder/vaxfinder mobile.png"
                             alt="Screenshots of the Vaxfinder website on mobile"
-                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/vaxfinder/vaxfinder mobile.png"
@@ -612,7 +584,7 @@ export default function Home() {
                         <img
                             src="/images/projects/vaxfinder/vaxfinder desktop.png"
                             alt="A detailed screenshot of the Vaxfinder website on desktop"
-                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image object-top"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/vaxfinder/vaxfinder desktop.png"
@@ -635,10 +607,8 @@ export default function Home() {
                         </a>
                     </div> */}
                     <div className="mt-28 space-y-3 sm:mr-4">
-                        <h3 className="font-semibold text-xl text-primary-light dark:text-primary-dark">
-                            Matchwell
-                        </h3>
-                        <p className="text-lg text-secondary-light dark:text-secondary-dark">
+                        <h3 className="heading-4">Matchwell</h3>
+                        <p className="body">
                             An online platform that connects healthcare
                             professionals with facilities that offer flexible
                             shift opportunities. I led product design for both
@@ -650,7 +620,7 @@ export default function Home() {
                         <img
                             src="/images/projects/matchwell/01 matchwell mobile.png"
                             alt="Screenshots of the Matchwell web app on mobile"
-                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/matchwell/01 matchwell mobile.png"
@@ -673,7 +643,7 @@ export default function Home() {
                         <img
                             src="/images/projects/matchwell/02 matchwell desktop.png"
                             alt="An image of the Matchwell candidates experience on desktop"
-                            className="border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/matchwell/02 matchwell desktop.png"
@@ -685,7 +655,7 @@ export default function Home() {
                         <img
                             src="/images/projects/matchwell/03 matchwell documentation.png"
                             alt="Design documentation for handing off user profile designs to my engineering team"
-                            className="border bg-indigo-50 dark:bg-indigo-950 border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-top pt-4 px-4 hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer"
+                            className="project-image bg-indigo-50 dark:bg-indigo-950 object-top pt-4 px-4"
                             onClick={() =>
                                 openLightbox(
                                     "/images/projects/matchwell/03 matchwell documentation.png"
@@ -707,7 +677,7 @@ export default function Home() {
                             ></img>
                         </a>
                     </div> */}
-                    <div className="mt-20 pb-2 text-lg text-secondary-light dark:text-secondary-dark">
+                    <div className="mt-20 pb-2 body">
                         Thanks for visiting, I hope you like my stuff!
                     </div>
                     <div
