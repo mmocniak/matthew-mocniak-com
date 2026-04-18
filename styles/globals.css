@@ -1,94 +1,78 @@
 /* ./styles/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');*/
+@import 'tailwindcss';
 
-html {
-    @apply bg-gray-50 dark:bg-zinc-900;
+@config '../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
 
-:root {
-    --stroke-color-light: #374151; /* Example light mode stroke color (Tailwind's Slate-600) */
-    --stroke-color-dark: #cbd5e1; /* Example dark mode stroke color (Tailwind's Slate-300) */
+@utility text-weakest {
+  /* Text Scale Classes */
+  @apply text-weakest-light dark:text-weakest-dark;
 }
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --stroke-color-light: #cbd5e1; /* Dark mode */
-        --stroke-color-dark: #374151; /* Dark mode */
-    }
+@utility text-weaker {
+  @apply text-weaker-light dark:text-weaker-dark;
 }
-
-/* Design System - Text Scale Utilities */
-@layer components {
-    /* Text Scale Classes */
-    .text-weakest {
-        @apply text-weakest-light dark:text-weakest-dark;
-    }
-
-    .text-weaker {
-        @apply text-weaker-light dark:text-weaker-dark;
-    }
-
-    .text-default {
-        @apply text-default-light dark:text-default-dark;
-    }
-
-    .text-stronger {
-        @apply text-stronger-light dark:text-stronger-dark;
-    }
-
-    .text-strongest {
-        @apply text-strongest-light dark:text-strongest-dark;
-    }
-
-    /* Typography Components */
-    .heading-display {
-        @apply text-4xl sm:text-5xl md:text-6xl font-semibold text-strongest;
-    }
-
-    .heading-1 {
-        @apply text-4xl sm:text-5xl font-semibold text-default;
-    }
-
-    .heading-2 {
-        @apply text-2xl sm:text-3xl font-semibold text-default;
-    }
-
-    .heading-3 {
-        @apply text-xl sm:text-2xl font-semibold text-default;
-    }
-
-    .heading-4 {
-        @apply text-lg sm:text-xl font-semibold text-default;
-    }
-
-    .body-large {
-        @apply text-lg sm:text-xl text-weaker;
-    }
-
-    .body {
-        @apply text-base sm:text-lg text-weaker;
-    }
-
-    .body-small {
-        @apply text-sm sm:text-base text-weaker;
-    }
-
-    .caption {
-        @apply text-xs sm:text-sm text-weakest;
-    }
-
-    .label {
-        @apply text-sm font-medium uppercase tracking-wider text-weaker;
-    }
-
-    /* Component Classes */
-    .btn-primary {
-        @apply flex items-center justify-center px-5 py-3 
+@utility text-default {
+  @apply text-default-light dark:text-default-dark;
+}
+@utility text-stronger {
+  @apply text-stronger-light dark:text-stronger-dark;
+}
+@utility text-strongest {
+  @apply text-strongest-light dark:text-strongest-dark;
+}
+@utility heading-display {
+  /* Typography Components */
+  @apply text-4xl sm:text-5xl md:text-6xl font-semibold text-strongest;
+}
+@utility heading-1 {
+  @apply text-4xl sm:text-5xl font-semibold text-default;
+}
+@utility heading-2 {
+  @apply text-2xl sm:text-3xl font-semibold text-default;
+}
+@utility heading-3 {
+  @apply text-xl sm:text-2xl font-semibold text-default;
+}
+@utility heading-4 {
+  @apply text-lg sm:text-xl font-semibold text-default;
+}
+@utility body-large {
+  @apply text-lg sm:text-xl text-weaker;
+}
+@utility body {
+  @apply text-base sm:text-lg text-weaker;
+}
+@utility body-small {
+  @apply text-sm sm:text-base text-weaker;
+}
+@utility caption {
+  @apply text-xs sm:text-sm text-weakest;
+}
+@utility label {
+  @apply text-sm font-medium uppercase tracking-wider text-weaker;
+}
+@utility btn-primary {
+  /* Component Classes */
+  @apply flex items-center justify-center px-5 py-3 
                bg-white dark:bg-zinc-800 
-               border border-slate-700 border-opacity-20 dark:border-zinc-600
+               border border-slate-700/20 dark:border-zinc-600
                text-blue-600 dark:text-blue-400 
                rounded-lg drop-shadow-btn 
                hover:bg-slate-100 dark:hover:bg-zinc-700 
@@ -96,52 +80,66 @@ html {
                active:bg-slate-200 dark:active:bg-zinc-950 
                active:text-blue-800 dark:active:text-blue-100
                active:shadow-inner
-               focus:outline-none focus:ring-4 focus:ring-offset-2
+               focus:outline-hidden focus:ring-4 focus:ring-offset-2
                transition duration-100;
-    }
-
-    .btn-disabled {
-        @apply disabled:bg-slate-200 dark:disabled:bg-zinc-600 
+}
+@utility btn-disabled {
+  @apply disabled:bg-slate-200 dark:disabled:bg-zinc-600 
                disabled:text-slate-400 dark:disabled:text-zinc-900 
                disabled:border-none disabled:shadow-none 
                disabled:drop-shadow-none disabled:cursor-not-allowed;
-    }
-
-    .link-primary {
-        @apply text-blue-600 dark:text-blue-400 
+}
+@utility link-primary {
+  @apply text-blue-600 dark:text-blue-400 
                hover:text-blue-500 dark:hover:text-blue-300 
                hover:underline 
                active:text-blue-800 dark:active:text-blue-100
                transition-colors;
-    }
-
-    .link-external {
-        @apply p-1 flex items-center 
+}
+@utility link-external {
+  @apply p-1 flex items-center 
                hover:underline 
                hover:text-blue-500 dark:hover:text-blue-300 
                active:text-blue-800 dark:active:text-blue-100;
-    }
-
-    .project-image {
-        @apply border border-slate-700 border-opacity-5 
-               shadow-sm rounded 
+}
+@utility project-image {
+  @apply border border-slate-700/5
+               shadow-xs rounded-sm 
                h-56 sm:h-64 md:h-96 
-               w-full object-cover object-left-top 
+               w-full object-cover object-top-left 
                hover:shadow-md 
                transform hover:-translate-y-0.5 
                transition cursor-pointer;
-    }
-
-    .section-divider {
-        @apply border-b border-slate-700 border-opacity-20 dark:border-opacity-50 
+}
+@utility section-divider {
+  @apply border-b border-slate-700/20 dark:border-slate-700/50
                pb-2 text-weaker text-sm font-semibold uppercase;
-    }
+}
+@utility container-main {
+  @apply mx-auto mt-8 mb-48 max-w-full md:max-w-2xl p-4 sm:p-8;
+}
+@utility container-section {
+  @apply mt-16 space-y-6;
+}
 
-    .container-main {
-        @apply mx-auto mt-8 mb-48 max-w-full md:max-w-2xl p-4 sm:p-8;
-    }
+@layer utilities {
+  /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');*/
 
-    .container-section {
-        @apply mt-16 space-y-6;
+  html {
+    @apply bg-gray-50 dark:bg-zinc-900;
+  }
+
+  :root {
+    --stroke-color-light: #374151; /* Example light mode stroke color (Tailwind's Slate-600) */
+    --stroke-color-dark: #cbd5e1; /* Example dark mode stroke color (Tailwind's Slate-300) */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --stroke-color-light: #cbd5e1; /* Dark mode */
+      --stroke-color-dark: #374151; /* Dark mode */
     }
+  }
+
+  /* Design System - Text Scale Utilities */
 }

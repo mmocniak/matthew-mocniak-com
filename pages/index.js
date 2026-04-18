@@ -93,7 +93,7 @@ export default function Home() {
                         </h2>
                     </div>
 
-                    <div className="mt-8 px-3 py-2 space-y-2 text-base rounded-xl bg-indigo-50 dark:bg-indigo-950 dark:bg-opacity-40 text-blue-600 dark:text-blue-400 border border-blue-600 border-opacity-10 dark:border-opacity-20 md:grid md:grid-flow-col md:content-center md:space-y-0">
+                    <div className="mt-8 px-3 py-2 space-y-2 text-base rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-blue-600 dark:text-blue-400 border border-blue-600/10 dark:border-blue-600/20 md:grid md:grid-flow-col md:content-center md:space-y-0">
                         <a
                             className="link-external"
                             href="https://www.figma.com/@matthew_mocniak"
@@ -707,7 +707,7 @@ export default function Home() {
 
             {lightbox.isOpen && (
                 <div
-                    className="fixed inset-0 bg-slate-950 bg-opacity-90 dark:bg-opacity-90 z-50 flex items-center justify-center p-4"
+                    className="fixed inset-0 bg-slate-950/90 z-50 flex items-center justify-center p-4"
                     onClick={closeLightbox}
                 >
                     <button

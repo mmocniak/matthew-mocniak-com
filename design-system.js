@@ -97,14 +97,14 @@ export const components = {
     container: {
         main: "mx-auto mt-8 mb-48 max-w-full md:max-w-2xl p-4 sm:p-8",
         section: "mt-16 space-y-6",
-        card: "p-6 rounded-lg border border-slate-700 border-opacity-10",
+        card: "p-6 rounded-lg border border-slate-700/10",
     },
 
     // Button patterns
     button: {
         base: "flex items-center justify-center px-5 py-3 rounded-lg transition duration-100",
         primary:
-            "bg-white dark:bg-zinc-800 border border-slate-700 border-opacity-20 text-blue-600 dark:text-blue-400",
+            "bg-white dark:bg-zinc-800 border border-slate-700/20 text-blue-600 dark:text-blue-400",
         hover: "hover:bg-slate-100 dark:hover:bg-zinc-700 hover:text-blue-500 dark:hover:text-blue-300",
         active: "active:bg-slate-200 dark:active:bg-zinc-950 active:text-blue-800 dark:active:text-blue-100",
         disabled:
@@ -122,7 +122,7 @@ export const components = {
     // Image patterns
     image: {
         project:
-            "border border-slate-700 border-opacity-5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer",
+            "border border-slate-700/5 shadow-sm rounded h-56 sm:h-64 md:h-96 w-full object-cover object-left-top hover:shadow-md transform hover:-translate-y-0.5 transition cursor-pointer",
         avatar: "w-32 md:w-40 h-32 md:h-40 object-bottom rounded-full",
     },
 };
